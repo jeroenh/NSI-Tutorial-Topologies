@@ -6,63 +6,65 @@
   xmlns:nmleth="http://schemas.ogf.org/nml/2012/10/ethernet#"
   xmlns:owl="http://www.w3.org/2002/07/owl#"
 >
-  <rdf:Description rdf:about="http://schemas.ogf.org/nml/2012/10/ethernet#vlans">
-    <owl:subPropertyOf rdf:resource="http://schemas.ogf.org/nml/2012/10/base#hasLabelGroup"/>
-  </rdf:Description>
   <nml:Topology rdf:about="urn:ogf:network:dominica:2012:topology">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </nml:Topology>
   <nml:Topology rdf:about="urn:ogf:network:aruba:2012:topology">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </nml:Topology>
-  <nml:PortGroup rdf:about="urn:ogf:network:curacao:2012:curacao-dominica">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <nmleth:vlans>1780-1799</nmleth:vlans>
-    <nml:isAlias rdf:resource="urn:ogf:network:dominica:2012:curacao-dominica"/>
-  </nml:PortGroup>
+  <rdf:Description rdf:about="http://schemas.ogf.org/nml/2012/10/ethernet#vlans">
+    <owl:subPropertyOf rdf:resource="http://schemas.ogf.org/nml/2012/10/base#hasLabelGroup"/>
+  </rdf:Description>
   <nml:PortGroup rdf:about="urn:ogf:network:curacao:2012:dominica-curacao">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <nmleth:vlans>1780-1799</nmleth:vlans>
     <nml:isAlias rdf:resource="urn:ogf:network:dominica:2012:dominica-curacao"/>
-  </nml:PortGroup>
-  <nsi:NSA rdf:about="urn:ogf:network:curacao:2012:nsa">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </nml:PortGroup>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:curacao:2012:nsa">
     <nsi:managing>
       <nml:Topology rdf:about="urn:ogf:network:curacao:2012:topology">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:curacao:2012:aruba-curacao"/>
         <nml:hasInboundPort rdf:resource="urn:ogf:network:curacao:2012:dominica-curacao"/>
-        <nsi:managedBy rdf:resource="urn:ogf:network:curacao:2012:nsa"/>
-        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:curacao:2012:bi-curacao-aruba"/>
-        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:curacao:2012:bi-curacao-dominica"/>
-        <nml:locatedAt rdf:resource="urn:ogf:network:curacao:2012:location"/>
-        <nml:hasOutboundPort rdf:resource="urn:ogf:network:curacao:2012:curacao-dominica"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:curacao:2012:aruba-curacao"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
         <nml:hasOutboundPort rdf:resource="urn:ogf:network:curacao:2012:curacao-aruba"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:curacao:2012:curacao-dominica"/>
+        <nsi:managedBy rdf:resource="urn:ogf:network:curacao:2012:nsa"/>
+        <nml:locatedAt rdf:resource="urn:ogf:network:curacao:2012:location"/>
+        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:curacao:2012:bi-curacao-dominica"/>
+        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:curacao:2012:bi-curacao-aruba"/>
       </nml:Topology>
     </nsi:managing>
-  </nsi:NSA>
+    <rdf:type rdf:resource="http://schemas.ogf.org/nsi/2012/10/topology#NSA"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:curacao:2012:bi-curacao-aruba">
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:curacao:2012:curacao-aruba">
+        <nml:isAlias rdf:resource="urn:ogf:network:aruba:2012:curacao-aruba"/>
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </nml:PortGroup>
+    </nml:hasPort>
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:curacao:2012:aruba-curacao">
+        <nml:isAlias rdf:resource="urn:ogf:network:aruba:2012:aruba-curacao"/>
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </nml:PortGroup>
+    </nml:hasPort>
+  </owl:NamedIndividual>
   <nml:Location rdf:about="urn:ogf:network:curacao:2012:location">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </nml:Location>
-  <nml:PortGroup rdf:about="urn:ogf:network:curacao:2012:aruba-curacao">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <nmleth:vlans>1780-1799</nmleth:vlans>
-    <nml:isAlias rdf:resource="urn:ogf:network:aruba:2012:aruba-curacao"/>
-  </nml:PortGroup>
-  <nml:BidirectionalPort rdf:about="urn:ogf:network:curacao:2012:bi-curacao-dominica">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <nml:hasPort rdf:resource="urn:ogf:network:curacao:2012:curacao-dominica"/>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:curacao:2012:bi-curacao-dominica">
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
     <nml:hasPort rdf:resource="urn:ogf:network:curacao:2012:dominica-curacao"/>
-  </nml:BidirectionalPort>
-  <nml:BidirectionalPort rdf:about="urn:ogf:network:curacao:2012:bi-curacao-aruba">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <nml:hasPort rdf:resource="urn:ogf:network:curacao:2012:aruba-curacao"/>
     <nml:hasPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:curacao:2012:curacao-aruba">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      <nml:PortGroup rdf:about="urn:ogf:network:curacao:2012:curacao-dominica">
+        <nml:isAlias rdf:resource="urn:ogf:network:dominica:2012:curacao-dominica"/>
         <nmleth:vlans>1780-1799</nmleth:vlans>
-        <nml:isAlias rdf:resource="urn:ogf:network:aruba:2012:curacao-aruba"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
       </nml:PortGroup>
     </nml:hasPort>
-  </nml:BidirectionalPort>
+  </owl:NamedIndividual>
 </rdf:RDF>
