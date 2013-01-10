@@ -9,25 +9,20 @@
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-aruba:bi-aruba-bonaire a nml:BidirectionalPort,
-        owl:NamedIndividual;
+aruba:bi-aruba-bonaire a nml:BidirectionalPort;
     nml:hasPort aruba:aruba-bonaire,
         aruba:bonaire-aruba .
 
-aruba:bi-aruba-curacao a nml:BidirectionalPort,
-        owl:NamedIndividual;
+aruba:bi-aruba-curacao a nml:BidirectionalPort;
     nml:hasPort aruba:aruba-curacao,
         aruba:curacao-aruba .
 
-aruba:location a nml:Location,
-        owl:NamedIndividual .
+aruba:location a nml:Location .
 
-aruba:nsa a nsi:NSA,
-        owl:NamedIndividual;
+aruba:nsa a nsi:NSA;
     nsi:managing aruba:topology .
 
-aruba:topology a nml:Topology,
-        owl:NamedIndividual;
+aruba:topology a nml:Topology;
     nml:hasBidirectionalPort aruba:bi-aruba-bonaire,
         aruba:bi-aruba-curacao;
     nml:hasInboundPort aruba:bonaire-aruba,
@@ -37,25 +32,20 @@ aruba:topology a nml:Topology,
     nml:locatedAt aruba:location;
     nsi:managedBy aruba:nsa .
 
-bonaire:bi-bonaire-aruba a nml:BidirectionalPort,
-        owl:NamedIndividual;
+bonaire:bi-bonaire-aruba a nml:BidirectionalPort;
     nml:hasPort bonaire:aruba-bonaire,
         bonaire:bonaire-aruba .
 
-bonaire:bi-bonaire-dominica a nml:BidirectionalPort,
-        owl:NamedIndividual;
+bonaire:bi-bonaire-dominica a nml:BidirectionalPort;
     nml:hasPort bonaire:bonaire-dominica,
         bonaire:dominica-bonaire .
 
-bonaire:location a nml:Location,
-        owl:NamedIndividual .
+bonaire:location a nml:Location .
 
-bonaire:nsa a nsi:NSA,
-        owl:NamedIndividual;
+bonaire:nsa a nsi:NSA;
     nsi:managing bonaire:topology .
 
-bonaire:topology a nml:Topology,
-        owl:NamedIndividual;
+bonaire:topology a nml:Topology;
     nml:hasBidirectionalPort bonaire:bi-bonaire-aruba,
         bonaire:bi-bonaire-dominica;
     nml:hasInboundPort bonaire:aruba-bonaire,
@@ -65,25 +55,20 @@ bonaire:topology a nml:Topology,
     nml:locatedAt bonaire:location;
     nsi:managedBy bonaire:nsa .
 
-curacao:bi-curacao-aruba a nml:BidirectionalPort,
-        owl:NamedIndividual;
+curacao:bi-curacao-aruba a nml:BidirectionalPort;
     nml:hasPort curacao:aruba-curacao,
         curacao:curacao-aruba .
 
-curacao:bi-curacao-dominica a nml:BidirectionalPort,
-        owl:NamedIndividual;
+curacao:bi-curacao-dominica a nml:BidirectionalPort;
     nml:hasPort curacao:curacao-dominica,
         curacao:dominica-curacao .
 
-curacao:location a nml:Location,
-        owl:NamedIndividual .
+curacao:location a nml:Location .
 
-curacao:nsa a nsi:NSA,
-        owl:NamedIndividual;
+curacao:nsa a nsi:NSA;
     nsi:managing curacao:topology .
 
-curacao:topology a nml:Topology,
-        owl:NamedIndividual;
+curacao:topology a nml:Topology;
     nml:hasBidirectionalPort curacao:bi-curacao-aruba,
         curacao:bi-curacao-dominica;
     nml:hasInboundPort curacao:aruba-curacao,
@@ -93,25 +78,20 @@ curacao:topology a nml:Topology,
     nml:locatedAt curacao:location;
     nsi:managedBy curacao:nsa .
 
-dominica:bi-dominica-bonaire a nml:BidirectionalPort,
-        owl:NamedIndividual;
+dominica:bi-dominica-bonaire a nml:BidirectionalPort;
     nml:hasPort dominica:bonaire-dominica,
         dominica:dominica-bonaire .
 
-dominica:bi-dominica-curacao a nml:BidirectionalPort,
-        owl:NamedIndividual;
+dominica:bi-dominica-curacao a nml:BidirectionalPort;
     nml:hasPort dominica:curacao-dominica,
         dominica:dominica-curacao .
 
-dominica:location a nml:Location,
-        owl:NamedIndividual .
+dominica:location a nml:Location .
 
-dominica:nsa a nsi:NSA,
-        owl:NamedIndividual;
+dominica:nsa a nsi:NSA;
     nsi:managing dominica:topology .
 
-dominica:topology a nml:Topology,
-        owl:NamedIndividual;
+dominica:topology a nml:Topology;
     nml:hasBidirectionalPort dominica:bi-dominica-bonaire,
         dominica:bi-dominica-curacao;
     nml:hasInboundPort dominica:bonaire-dominica,
@@ -121,83 +101,67 @@ dominica:topology a nml:Topology,
     nml:locatedAt dominica:location;
     nsi:managedBy dominica:nsa .
 
-aruba:aruba-bonaire a nml:PortGroup,
-        owl:NamedIndividual;
+aruba:aruba-bonaire a nml:PortGroup;
     nml:isAlias bonaire:aruba-bonaire;
     nmleth:vlans "1780-1799" .
 
-aruba:aruba-curacao a nml:PortGroup,
-        owl:NamedIndividual;
+aruba:aruba-curacao a nml:PortGroup;
     nml:isAlias curacao:aruba-curacao;
     nmleth:vlans "1780-1799" .
 
-aruba:bonaire-aruba a nml:PortGroup,
-        owl:NamedIndividual;
+aruba:bonaire-aruba a nml:PortGroup;
     nml:isAlias bonaire:bonaire-aruba;
     nmleth:vlans "1780-1799" .
 
-aruba:curacao-aruba a nml:PortGroup,
-        owl:NamedIndividual;
+aruba:curacao-aruba a nml:PortGroup;
     nml:isAlias curacao:curacao-aruba;
     nmleth:vlans "1780-1799" .
 
-bonaire:aruba-bonaire a nml:PortGroup,
-        owl:NamedIndividual;
+bonaire:aruba-bonaire a nml:PortGroup;
     nml:isAlias aruba:aruba-bonaire;
     nmleth:vlans "1780-1799" .
 
-bonaire:bonaire-aruba a nml:PortGroup,
-        owl:NamedIndividual;
+bonaire:bonaire-aruba a nml:PortGroup;
     nml:isAlias aruba:bonaire-aruba;
     nmleth:vlans "1780-1799" .
 
-bonaire:bonaire-dominica a nml:PortGroup,
-        owl:NamedIndividual;
+bonaire:bonaire-dominica a nml:PortGroup;
     nml:isAlias dominica:bonaire-dominica;
     nmleth:vlans "1780-1799" .
 
-bonaire:dominica-bonaire a nml:PortGroup,
-        owl:NamedIndividual;
+bonaire:dominica-bonaire a nml:PortGroup;
     nml:isAlias dominica:dominica-bonaire;
     nmleth:vlans "1780-1799" .
 
-curacao:aruba-curacao a nml:PortGroup,
-        owl:NamedIndividual;
+curacao:aruba-curacao a nml:PortGroup;
     nml:isAlias aruba:aruba-curacao;
     nmleth:vlans "1780-1799" .
 
-curacao:curacao-aruba a nml:PortGroup,
-        owl:NamedIndividual;
+curacao:curacao-aruba a nml:PortGroup;
     nml:isAlias aruba:curacao-aruba;
     nmleth:vlans "1780-1799" .
 
-curacao:curacao-dominica a nml:PortGroup,
-        owl:NamedIndividual;
+curacao:curacao-dominica a nml:PortGroup;
     nml:isAlias dominica:curacao-dominica;
     nmleth:vlans "1780-1799" .
 
-curacao:dominica-curacao a nml:PortGroup,
-        owl:NamedIndividual;
+curacao:dominica-curacao a nml:PortGroup;
     nml:isAlias dominica:dominica-curacao;
     nmleth:vlans "1780-1799" .
 
-dominica:bonaire-dominica a nml:PortGroup,
-        owl:NamedIndividual;
+dominica:bonaire-dominica a nml:PortGroup;
     nml:isAlias bonaire:bonaire-dominica;
     nmleth:vlans "1780-1799" .
 
-dominica:curacao-dominica a nml:PortGroup,
-        owl:NamedIndividual;
+dominica:curacao-dominica a nml:PortGroup;
     nml:isAlias curacao:curacao-dominica;
     nmleth:vlans "1780-1799" .
 
-dominica:dominica-bonaire a nml:PortGroup,
-        owl:NamedIndividual;
+dominica:dominica-bonaire a nml:PortGroup;
     nml:isAlias bonaire:dominica-bonaire;
     nmleth:vlans "1780-1799" .
 
-dominica:dominica-curacao a nml:PortGroup,
-        owl:NamedIndividual;
+dominica:dominica-curacao a nml:PortGroup;
     nml:isAlias curacao:dominica-curacao;
     nmleth:vlans "1780-1799" .
 

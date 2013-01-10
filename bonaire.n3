@@ -6,31 +6,24 @@
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-<urn:ogf:network:aruba:2012:topology> a nml:Topology,
-        owl:NamedIndividual .
+<urn:ogf:network:aruba:2012:topology> a nml:Topology .
 
-<urn:ogf:network:dominica:2012:topology> a nml:Topology,
-        owl:NamedIndividual .
+<urn:ogf:network:dominica:2012:topology> a nml:Topology .
 
-bonaire:bi-bonaire-aruba a nml:BidirectionalPort,
-        owl:NamedIndividual;
+bonaire:bi-bonaire-aruba a nml:BidirectionalPort;
     nml:hasPort bonaire:aruba-bonaire,
         bonaire:bonaire-aruba .
 
-bonaire:bi-bonaire-dominica a nml:BidirectionalPort,
-        owl:NamedIndividual;
+bonaire:bi-bonaire-dominica a nml:BidirectionalPort;
     nml:hasPort bonaire:bonaire-dominica,
         bonaire:dominica-bonaire .
 
-bonaire:location a nml:Location,
-        owl:NamedIndividual .
+bonaire:location a nml:Location .
 
-bonaire:nsa a nsi:NSA,
-        owl:NamedIndividual;
+bonaire:nsa a nsi:NSA;
     nsi:managing bonaire:topology .
 
-bonaire:topology a nml:Topology,
-        owl:NamedIndividual;
+bonaire:topology a nml:Topology;
     nml:hasBidirectionalPort bonaire:bi-bonaire-aruba,
         bonaire:bi-bonaire-dominica;
     nml:hasInboundPort bonaire:aruba-bonaire,
@@ -40,23 +33,19 @@ bonaire:topology a nml:Topology,
     nml:locatedAt bonaire:location;
     nsi:managedBy bonaire:nsa .
 
-bonaire:aruba-bonaire a nml:PortGroup,
-        owl:NamedIndividual;
+bonaire:aruba-bonaire a nml:PortGroup;
     nml:isAlias <urn:ogf:network:aruba:2012:aruba-bonaire>;
     nmleth:vlans "1780-1799" .
 
-bonaire:bonaire-aruba a nml:PortGroup,
-        owl:NamedIndividual;
+bonaire:bonaire-aruba a nml:PortGroup;
     nml:isAlias <urn:ogf:network:aruba:2012:bonaire-aruba>;
     nmleth:vlans "1780-1799" .
 
-bonaire:bonaire-dominica a nml:PortGroup,
-        owl:NamedIndividual;
+bonaire:bonaire-dominica a nml:PortGroup;
     nml:isAlias <urn:ogf:network:dominica:2012:bonaire-dominica>;
     nmleth:vlans "1780-1799" .
 
-bonaire:dominica-bonaire a nml:PortGroup,
-        owl:NamedIndividual;
+bonaire:dominica-bonaire a nml:PortGroup;
     nml:isAlias <urn:ogf:network:dominica:2012:dominica-bonaire>;
     nmleth:vlans "1780-1799" .
 

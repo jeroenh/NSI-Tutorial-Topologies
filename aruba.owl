@@ -1,68 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-  xmlns:nsi="http://schemas.ogf.org/nsi/2012/10/topology#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
   xmlns:nml="http://schemas.ogf.org/nml/2012/10/base#"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:nmleth="http://schemas.ogf.org/nml/2012/10/ethernet#"
-  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:nsi="http://schemas.ogf.org/nsi/2012/10/topology#"
 >
+  <nml:Topology rdf:about="urn:ogf:network:curacao:2012:topology"/>
   <rdf:Description rdf:about="http://schemas.ogf.org/nml/2012/10/ethernet#vlans">
     <owl:subPropertyOf rdf:resource="http://schemas.ogf.org/nml/2012/10/base#hasLabelGroup"/>
   </rdf:Description>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:curacao:2012:topology">
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Topology"/>
-  </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:bonaire:2012:topology">
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Topology"/>
-  </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:aruba:2012:bonaire-aruba">
-    <nml:isAlias rdf:resource="urn:ogf:network:bonaire:2012:bonaire-aruba"/>
+  <nml:Topology rdf:about="urn:ogf:network:bonaire:2012:topology"/>
+  <nml:PortGroup rdf:about="urn:ogf:network:aruba:2012:aruba-bonaire">
     <nmleth:vlans>1780-1799</nmleth:vlans>
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-  </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:aruba:2012:aruba-bonaire">
     <nml:isAlias rdf:resource="urn:ogf:network:bonaire:2012:aruba-bonaire"/>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:aruba:2012:bonaire-aruba">
     <nmleth:vlans>1780-1799</nmleth:vlans>
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-  </owl:NamedIndividual>
-  <owl:NamedIndividual rdf:about="urn:ogf:network:aruba:2012:curacao-aruba">
-    <nml:isAlias rdf:resource="urn:ogf:network:curacao:2012:curacao-aruba"/>
-    <nmleth:vlans>1780-1799</nmleth:vlans>
-    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-  </owl:NamedIndividual>
-  <nsi:NSA rdf:about="urn:ogf:network:aruba:2012:nsa">
-    <nsi:managing>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:aruba:2012:topology">
-        <nsi:managedBy rdf:resource="urn:ogf:network:aruba:2012:nsa"/>
-        <nml:locatedAt rdf:resource="urn:ogf:network:aruba:2012:location"/>
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#Topology"/>
-        <nml:hasOutboundPort rdf:resource="urn:ogf:network:aruba:2012:aruba-bonaire"/>
-        <nml:hasOutboundPort rdf:resource="urn:ogf:network:aruba:2012:aruba-curacao"/>
-        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:aruba:2012:bi-aruba-bonaire"/>
-        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:aruba:2012:bi-aruba-curacao"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:aruba:2012:curacao-aruba"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:aruba:2012:bonaire-aruba"/>
-      </owl:NamedIndividual>
-    </nsi:managing>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </nsi:NSA>
-  <nml:BidirectionalPort rdf:about="urn:ogf:network:aruba:2012:bi-aruba-bonaire">
-    <nml:hasPort rdf:resource="urn:ogf:network:aruba:2012:aruba-bonaire"/>
-    <nml:hasPort rdf:resource="urn:ogf:network:aruba:2012:bonaire-aruba"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </nml:BidirectionalPort>
-  <nml:Location rdf:about="urn:ogf:network:aruba:2012:location">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </nml:Location>
-  <nml:BidirectionalPort rdf:about="urn:ogf:network:aruba:2012:bi-aruba-curacao">
-    <nml:hasPort rdf:resource="urn:ogf:network:aruba:2012:curacao-aruba"/>
-    <nml:hasPort>
-      <owl:NamedIndividual rdf:about="urn:ogf:network:aruba:2012:aruba-curacao">
-        <nml:isAlias rdf:resource="urn:ogf:network:curacao:2012:aruba-curacao"/>
+    <nml:isAlias rdf:resource="urn:ogf:network:bonaire:2012:bonaire-aruba"/>
+  </nml:PortGroup>
+  <nml:Topology rdf:about="urn:ogf:network:aruba:2012:topology">
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:aruba:2012:bonaire-aruba"/>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:aruba:2012:curacao-aruba">
         <nmleth:vlans>1780-1799</nmleth:vlans>
-        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#PortGroup"/>
-      </owl:NamedIndividual>
-    </nml:hasPort>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </nml:BidirectionalPort>
+        <nml:isAlias rdf:resource="urn:ogf:network:curacao:2012:curacao-aruba"/>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nsi:managedBy>
+      <nsi:NSA rdf:about="urn:ogf:network:aruba:2012:nsa">
+        <nsi:managing rdf:resource="urn:ogf:network:aruba:2012:topology"/>
+      </nsi:NSA>
+    </nsi:managedBy>
+    <nml:locatedAt>
+      <nml:Location rdf:about="urn:ogf:network:aruba:2012:location"/>
+    </nml:locatedAt>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:aruba:2012:bi-aruba-bonaire">
+        <nml:hasPort rdf:resource="urn:ogf:network:aruba:2012:aruba-bonaire"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:aruba:2012:bonaire-aruba"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:aruba:2012:bi-aruba-curacao">
+        <nml:hasPort rdf:resource="urn:ogf:network:aruba:2012:aruba-curacao"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:aruba:2012:curacao-aruba"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:aruba:2012:aruba-curacao">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+        <nml:isAlias rdf:resource="urn:ogf:network:curacao:2012:aruba-curacao"/>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:aruba:2012:aruba-bonaire"/>
+  </nml:Topology>
 </rdf:RDF>
