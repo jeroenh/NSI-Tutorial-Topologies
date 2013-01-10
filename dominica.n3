@@ -1,0 +1,62 @@
+@prefix dominica: <urn:ogf:network:dominica:2012:> .
+@prefix nml: <http://schemas.ogf.org/nml/2012/10/base#> .
+@prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
+@prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
+
+<urn:ogf:network:bonaire:2012:topology> a nml:Topology,
+        owl:NamedIndividual .
+
+<urn:ogf:network:curacao:2012:topology> a nml:Topology,
+        owl:NamedIndividual .
+
+dominica:bi-dominica-bonaire a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort dominica:bonaire-dominica,
+        dominica:dominica-bonaire .
+
+dominica:bi-dominica-curacao a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort dominica:curacao-dominica,
+        dominica:dominica-curacao .
+
+dominica:location a nml:Location,
+        owl:NamedIndividual .
+
+dominica:nsa a nsi:NSA,
+        owl:NamedIndividual;
+    nsi:managing dominica:topology .
+
+dominica:topology a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasBidirectionalPort dominica:bi-dominica-bonaire,
+        dominica:bi-dominica-curacao;
+    nml:hasInboundPort dominica:bonaire-dominica,
+        dominica:curacao-dominica;
+    nml:hasOutboundPort dominica:dominica-bonaire,
+        dominica:dominica-curacao;
+    nml:locatedAt dominica:location;
+    nsi:managedBy dominica:nsa .
+
+dominica:bonaire-dominica a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:bonaire:2012:bonaire-dominica>;
+    nmleth:vlans "1780-1799" .
+
+dominica:curacao-dominica a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:curacao:2012:curacao-dominica>;
+    nmleth:vlans "1780-1799" .
+
+dominica:dominica-bonaire a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:bonaire:2012:dominica-bonaire>;
+    nmleth:vlans "1780-1799" .
+
+dominica:dominica-curacao a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:curacao:2012:dominica-curacao>;
+    nmleth:vlans "1780-1799" .
+

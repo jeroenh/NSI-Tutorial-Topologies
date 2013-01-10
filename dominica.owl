@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:nsi="http://schemas.ogf.org/nsi/2012/10/topology#"
+  xmlns:nml="http://schemas.ogf.org/nml/2012/10/base#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:nmleth="http://schemas.ogf.org/nml/2012/10/ethernet#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+>
+  <nml:Topology rdf:about="urn:ogf:network:curacao:2012:topology">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </nml:Topology>
+  <nml:Topology rdf:about="urn:ogf:network:bonaire:2012:topology">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </nml:Topology>
+  <rdf:Description rdf:about="http://schemas.ogf.org/nml/2012/10/ethernet#vlans">
+    <owl:subPropertyOf rdf:resource="http://schemas.ogf.org/nml/2012/10/base#hasLabelGroup"/>
+  </rdf:Description>
+  <nml:PortGroup rdf:about="urn:ogf:network:dominica:2012:bonaire-dominica">
+    <nml:isAlias rdf:resource="urn:ogf:network:bonaire:2012:bonaire-dominica"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <owl:NamedIndividual rdf:about="urn:ogf:network:dominica:2012:bi-dominica-bonaire">
+    <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
+    <nml:hasPort rdf:resource="urn:ogf:network:dominica:2012:bonaire-dominica"/>
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:dominica:2012:dominica-bonaire">
+        <nml:isAlias rdf:resource="urn:ogf:network:bonaire:2012:dominica-bonaire"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+  </owl:NamedIndividual>
+  <nml:PortGroup rdf:about="urn:ogf:network:dominica:2012:dominica-curacao">
+    <nml:isAlias rdf:resource="urn:ogf:network:curacao:2012:dominica-curacao"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:Topology rdf:about="urn:ogf:network:dominica:2012:topology">
+    <nsi:managedBy>
+      <nsi:NSA rdf:about="urn:ogf:network:dominica:2012:nsa">
+        <nsi:managing rdf:resource="urn:ogf:network:dominica:2012:topology"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </nsi:NSA>
+    </nsi:managedBy>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:dominica:2012:curacao-dominica">
+        <nml:isAlias rdf:resource="urn:ogf:network:curacao:2012:curacao-dominica"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:dominica:2012:bonaire-dominica"/>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:dominica:2012:dominica-curacao"/>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:dominica:2012:dominica-bonaire"/>
+    <nml:hasBidirectionalPort>
+      <owl:NamedIndividual rdf:about="urn:ogf:network:dominica:2012:bi-dominica-curacao">
+        <rdf:type rdf:resource="http://schemas.ogf.org/nml/2012/10/base#BidirectionalPort"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:dominica:2012:dominica-curacao"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:dominica:2012:curacao-dominica"/>
+      </owl:NamedIndividual>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:dominica:2012:bi-dominica-bonaire"/>
+    <nml:locatedAt>
+      <nml:Location rdf:about="urn:ogf:network:dominica:2012:location">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </nml:Location>
+    </nml:locatedAt>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </nml:Topology>
+</rdf:RDF>

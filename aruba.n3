@@ -1,0 +1,62 @@
+@prefix aruba: <urn:ogf:network:aruba:2012:> .
+@prefix nml: <http://schemas.ogf.org/nml/2012/10/base#> .
+@prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
+@prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
+
+<urn:ogf:network:bonaire:2012:topology> a nml:Topology,
+        owl:NamedIndividual .
+
+<urn:ogf:network:curacao:2012:topology> a nml:Topology,
+        owl:NamedIndividual .
+
+aruba:bi-aruba-bonaire a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort aruba:aruba-bonaire,
+        aruba:bonaire-aruba .
+
+aruba:bi-aruba-curacao a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort aruba:aruba-curacao,
+        aruba:curacao-aruba .
+
+aruba:location a nml:Location,
+        owl:NamedIndividual .
+
+aruba:nsa a nsi:NSA,
+        owl:NamedIndividual;
+    nsi:managing aruba:topology .
+
+aruba:topology a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasBidirectionalPort aruba:bi-aruba-bonaire,
+        aruba:bi-aruba-curacao;
+    nml:hasInboundPort aruba:bonaire-aruba,
+        aruba:curacao-aruba;
+    nml:hasOutboundPort aruba:aruba-bonaire,
+        aruba:aruba-curacao;
+    nml:locatedAt aruba:location;
+    nsi:managedBy aruba:nsa .
+
+aruba:aruba-bonaire a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:bonaire:2012:aruba-bonaire>;
+    nmleth:vlans "1780-1799" .
+
+aruba:aruba-curacao a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:curacao:2012:aruba-curacao>;
+    nmleth:vlans "1780-1799" .
+
+aruba:bonaire-aruba a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:bonaire:2012:bonaire-aruba>;
+    nmleth:vlans "1780-1799" .
+
+aruba:curacao-aruba a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:curacao:2012:curacao-aruba>;
+    nmleth:vlans "1780-1799" .
+

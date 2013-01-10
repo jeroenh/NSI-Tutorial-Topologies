@@ -1,0 +1,62 @@
+@prefix curacao: <urn:ogf:network:curacao:2012:> .
+@prefix nml: <http://schemas.ogf.org/nml/2012/10/base#> .
+@prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
+@prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
+
+<urn:ogf:network:aruba:2012:topology> a nml:Topology,
+        owl:NamedIndividual .
+
+<urn:ogf:network:dominica:2012:topology> a nml:Topology,
+        owl:NamedIndividual .
+
+curacao:bi-curacao-aruba a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort curacao:aruba-curacao,
+        curacao:curacao-aruba .
+
+curacao:bi-curacao-dominica a nml:BidirectionalPort,
+        owl:NamedIndividual;
+    nml:hasPort curacao:curacao-dominica,
+        curacao:dominica-curacao .
+
+curacao:location a nml:Location,
+        owl:NamedIndividual .
+
+curacao:nsa a nsi:NSA,
+        owl:NamedIndividual;
+    nsi:managing curacao:topology .
+
+curacao:topology a nml:Topology,
+        owl:NamedIndividual;
+    nml:hasBidirectionalPort curacao:bi-curacao-aruba,
+        curacao:bi-curacao-dominica;
+    nml:hasInboundPort curacao:aruba-curacao,
+        curacao:dominica-curacao;
+    nml:hasOutboundPort curacao:curacao-aruba,
+        curacao:curacao-dominica;
+    nml:locatedAt curacao:location;
+    nsi:managedBy curacao:nsa .
+
+curacao:aruba-curacao a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:aruba:2012:aruba-curacao>;
+    nmleth:vlans "1780-1799" .
+
+curacao:curacao-aruba a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:aruba:2012:curacao-aruba>;
+    nmleth:vlans "1780-1799" .
+
+curacao:curacao-dominica a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:dominica:2012:curacao-dominica>;
+    nmleth:vlans "1780-1799" .
+
+curacao:dominica-curacao a nml:PortGroup,
+        owl:NamedIndividual;
+    nml:isAlias <urn:ogf:network:dominica:2012:dominica-curacao>;
+    nmleth:vlans "1780-1799" .
+
