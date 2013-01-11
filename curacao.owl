@@ -11,50 +11,43 @@
     <owl:subPropertyOf rdf:resource="http://schemas.ogf.org/nml/2012/10/base#hasLabelGroup"/>
   </rdf:Description>
   <nml:Topology rdf:about="urn:ogf:network:dominica:2013:topology"/>
+  <nml:Location rdf:about="urn:ogf:network:curacao:2013:location"/>
+  <nml:PortGroup rdf:about="urn:ogf:network:curacao:2013:port20-in">
+    <nml:isAlias rdf:resource="urn:ogf:network:dominica:2013:port10-out"/>
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:curacao:2013:bi-curacao">
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:curacao:2013:port15-in">
+        <nml:isAlias rdf:resource="urn:ogf:network:aruba:2013:port25-out"/>
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:curacao:2013:port15-out">
+        <nml:isAlias rdf:resource="urn:ogf:network:aruba:2013:port25-in"/>
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:curacao:2013:port20-out">
+        <nml:isAlias rdf:resource="urn:ogf:network:dominica:2013:port10-in"/>
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+    <nml:hasPort rdf:resource="urn:ogf:network:curacao:2013:port20-in"/>
+  </nml:BidirectionalPort>
   <nml:Topology rdf:about="urn:ogf:network:curacao:2013:topology">
-    <nml:hasInboundPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:curacao:2013:dominica-curacao">
-        <nml:isAlias rdf:resource="urn:ogf:network:dominica:2013:dominica-curacao"/>
-        <nmleth:vlans>1780-1799</nmleth:vlans>
-      </nml:PortGroup>
-    </nml:hasInboundPort>
-    <nml:hasInboundPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:curacao:2013:aruba-curacao">
-        <nml:isAlias rdf:resource="urn:ogf:network:aruba:2013:aruba-curacao"/>
-        <nmleth:vlans>1780-1799</nmleth:vlans>
-      </nml:PortGroup>
-    </nml:hasInboundPort>
-    <nml:hasBidirectionalPort>
-      <nml:BidirectionalPort rdf:about="urn:ogf:network:curacao:2013:bi-curacao-dominica">
-        <nml:hasPort rdf:resource="urn:ogf:network:curacao:2013:dominica-curacao"/>
-        <nml:hasPort rdf:resource="urn:ogf:network:curacao:2013:curacao-dominica"/>
-      </nml:BidirectionalPort>
-    </nml:hasBidirectionalPort>
-    <nml:hasBidirectionalPort>
-      <nml:BidirectionalPort rdf:about="urn:ogf:network:curacao:2013:bi-curacao-aruba">
-        <nml:hasPort rdf:resource="urn:ogf:network:curacao:2013:curacao-aruba"/>
-        <nml:hasPort rdf:resource="urn:ogf:network:curacao:2013:aruba-curacao"/>
-      </nml:BidirectionalPort>
-    </nml:hasBidirectionalPort>
     <nsi:managedBy>
       <nsi:NSA rdf:about="urn:ogf:network:curacao:2013:nsa">
         <nsi:managing rdf:resource="urn:ogf:network:curacao:2013:topology"/>
       </nsi:NSA>
     </nsi:managedBy>
-    <nml:hasOutboundPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:curacao:2013:curacao-aruba">
-        <nml:isAlias rdf:resource="urn:ogf:network:aruba:2013:curacao-aruba"/>
-        <nmleth:vlans>1780-1799</nmleth:vlans>
-      </nml:PortGroup>
-    </nml:hasOutboundPort>
-    <nml:hasOutboundPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:curacao:2013:curacao-dominica">
-        <nml:isAlias rdf:resource="urn:ogf:network:dominica:2013:curacao-dominica"/>
-        <nmleth:vlans>1780-1799</nmleth:vlans>
-      </nml:PortGroup>
-    </nml:hasOutboundPort>
-    <nml:locatedAt>
-      <nml:Location rdf:about="urn:ogf:network:curacao:2013:location"/>
-    </nml:locatedAt>
+    <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:curacao:2013:bi-curacao"/>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:curacao:2013:port15-in"/>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:curacao:2013:port20-in"/>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:curacao:2013:port20-out"/>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:curacao:2013:port15-out"/>
+    <nml:locatedAt rdf:resource="urn:ogf:network:curacao:2013:location"/>
   </nml:Topology>
 </rdf:RDF>

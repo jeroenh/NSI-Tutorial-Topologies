@@ -7,53 +7,48 @@
   xmlns:nsi="http://schemas.ogf.org/nsi/2012/10/topology#"
 >
   <nml:Topology rdf:about="urn:ogf:network:bonaire:2013:topology"/>
-  <nml:Topology rdf:about="urn:ogf:network:curacao:2013:topology"/>
   <rdf:Description rdf:about="http://schemas.ogf.org/nml/2012/10/ethernet#vlans">
     <owl:subPropertyOf rdf:resource="http://schemas.ogf.org/nml/2012/10/base#hasLabelGroup"/>
   </rdf:Description>
-  <nml:PortGroup rdf:about="urn:ogf:network:dominica:2013:dominica-bonaire">
-    <nml:isAlias rdf:resource="urn:ogf:network:bonaire:2013:dominica-bonaire"/>
-    <nmleth:vlans>1780-1799</nmleth:vlans>
-  </nml:PortGroup>
-  <nml:Topology rdf:about="urn:ogf:network:dominica:2013:topology">
-    <nml:locatedAt>
-      <nml:Location rdf:about="urn:ogf:network:dominica:2013:location"/>
-    </nml:locatedAt>
-    <nml:hasOutboundPort rdf:resource="urn:ogf:network:dominica:2013:dominica-bonaire"/>
-    <nml:hasOutboundPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:dominica:2013:dominica-curacao">
-        <nml:isAlias rdf:resource="urn:ogf:network:curacao:2013:dominica-curacao"/>
+  <nml:Topology rdf:about="urn:ogf:network:curacao:2013:topology"/>
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:dominica:2013:bi-dominica">
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:dominica:2013:port15-in">
+        <nml:isAlias rdf:resource="urn:ogf:network:curacao:2013:port25-out"/>
         <nmleth:vlans>1780-1799</nmleth:vlans>
       </nml:PortGroup>
-    </nml:hasOutboundPort>
-    <nml:hasBidirectionalPort>
-      <nml:BidirectionalPort rdf:about="urn:ogf:network:dominica:2013:bi-dominica-bonaire">
-        <nml:hasPort rdf:resource="urn:ogf:network:dominica:2013:dominica-bonaire"/>
-        <nml:hasPort rdf:resource="urn:ogf:network:dominica:2013:bonaire-dominica"/>
-      </nml:BidirectionalPort>
-    </nml:hasBidirectionalPort>
-    <nml:hasBidirectionalPort>
-      <nml:BidirectionalPort rdf:about="urn:ogf:network:dominica:2013:bi-dominica-curacao">
-        <nml:hasPort rdf:resource="urn:ogf:network:dominica:2013:dominica-curacao"/>
-        <nml:hasPort rdf:resource="urn:ogf:network:dominica:2013:curacao-dominica"/>
-      </nml:BidirectionalPort>
-    </nml:hasBidirectionalPort>
-    <nsi:managedBy>
-      <nsi:NSA rdf:about="urn:ogf:network:dominica:2013:nsa">
-        <nsi:managing rdf:resource="urn:ogf:network:dominica:2013:topology"/>
-      </nsi:NSA>
-    </nsi:managedBy>
-    <nml:hasInboundPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:dominica:2013:curacao-dominica">
-        <nml:isAlias rdf:resource="urn:ogf:network:curacao:2013:curacao-dominica"/>
+    </nml:hasPort>
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:dominica:2013:port15-out">
+        <nml:isAlias rdf:resource="urn:ogf:network:curacao:2013:port25-in"/>
         <nmleth:vlans>1780-1799</nmleth:vlans>
       </nml:PortGroup>
-    </nml:hasInboundPort>
-    <nml:hasInboundPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:dominica:2013:bonaire-dominica">
-        <nml:isAlias rdf:resource="urn:ogf:network:bonaire:2013:bonaire-dominica"/>
+    </nml:hasPort>
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:dominica:2013:port25-out">
+        <nml:isAlias rdf:resource="urn:ogf:network:bonaire:2013:port25-in"/>
         <nmleth:vlans>1780-1799</nmleth:vlans>
       </nml:PortGroup>
-    </nml:hasInboundPort>
-  </nml:Topology>
+    </nml:hasPort>
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:dominica:2013:port25-in">
+        <nml:isAlias rdf:resource="urn:ogf:network:bonaire:2013:port25-out"/>
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+  </nml:BidirectionalPort>
+  <nsi:NSA rdf:about="urn:ogf:network:dominica:2013:nsa">
+    <nsi:managing>
+      <nml:Topology rdf:about="urn:ogf:network:dominica:2013:topology">
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:dominica:2013:port15-in"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:dominica:2013:port25-in"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:dominica:2013:port15-out"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:dominica:2013:port25-out"/>
+        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:dominica:2013:bi-dominica"/>
+        <nml:locatedAt rdf:resource="urn:ogf:network:dominica:2013:location"/>
+        <nsi:managedBy rdf:resource="urn:ogf:network:dominica:2013:nsa"/>
+      </nml:Topology>
+    </nsi:managing>
+  </nsi:NSA>
+  <nml:Location rdf:about="urn:ogf:network:dominica:2013:location"/>
 </rdf:RDF>

@@ -9,13 +9,11 @@
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-aruba:bi-aruba-bonaire a nml:BidirectionalPort;
-    nml:hasPort aruba:aruba-bonaire,
-        aruba:bonaire-aruba .
-
-aruba:bi-aruba-curacao a nml:BidirectionalPort;
-    nml:hasPort aruba:aruba-curacao,
-        aruba:curacao-aruba .
+aruba:bi-aruba a nml:BidirectionalPort;
+    nml:hasPort aruba:port10-in,
+        aruba:port10-out,
+        aruba:port20-in,
+        aruba:port20-out .
 
 aruba:location a nml:Location .
 
@@ -23,22 +21,19 @@ aruba:nsa a nsi:NSA;
     nsi:managing aruba:topology .
 
 aruba:topology a nml:Topology;
-    nml:hasBidirectionalPort aruba:bi-aruba-bonaire,
-        aruba:bi-aruba-curacao;
-    nml:hasInboundPort aruba:bonaire-aruba,
-        aruba:curacao-aruba;
-    nml:hasOutboundPort aruba:aruba-bonaire,
-        aruba:aruba-curacao;
+    nml:hasBidirectionalPort aruba:bi-aruba;
+    nml:hasInboundPort aruba:port10-in,
+        aruba:port20-in;
+    nml:hasOutboundPort aruba:port10-out,
+        aruba:port20-out;
     nml:locatedAt aruba:location;
     nsi:managedBy aruba:nsa .
 
-bonaire:bi-bonaire-aruba a nml:BidirectionalPort;
-    nml:hasPort bonaire:aruba-bonaire,
-        bonaire:bonaire-aruba .
-
-bonaire:bi-bonaire-dominica a nml:BidirectionalPort;
-    nml:hasPort bonaire:bonaire-dominica,
-        bonaire:dominica-bonaire .
+bonaire:bi-bonaire a nml:BidirectionalPort;
+    nml:hasPort bonaire:port15-in,
+        bonaire:port15-out,
+        bonaire:port20-in,
+        bonaire:port20-out .
 
 bonaire:location a nml:Location .
 
@@ -46,22 +41,19 @@ bonaire:nsa a nsi:NSA;
     nsi:managing bonaire:topology .
 
 bonaire:topology a nml:Topology;
-    nml:hasBidirectionalPort bonaire:bi-bonaire-aruba,
-        bonaire:bi-bonaire-dominica;
-    nml:hasInboundPort bonaire:aruba-bonaire,
-        bonaire:dominica-bonaire;
-    nml:hasOutboundPort bonaire:bonaire-aruba,
-        bonaire:bonaire-dominica;
+    nml:hasBidirectionalPort bonaire:bi-bonaire;
+    nml:hasInboundPort bonaire:port15-in,
+        bonaire:port20-in;
+    nml:hasOutboundPort bonaire:port15-out,
+        bonaire:port20-out;
     nml:locatedAt bonaire:location;
     nsi:managedBy bonaire:nsa .
 
-curacao:bi-curacao-aruba a nml:BidirectionalPort;
-    nml:hasPort curacao:aruba-curacao,
-        curacao:curacao-aruba .
-
-curacao:bi-curacao-dominica a nml:BidirectionalPort;
-    nml:hasPort curacao:curacao-dominica,
-        curacao:dominica-curacao .
+curacao:bi-curacao a nml:BidirectionalPort;
+    nml:hasPort curacao:port15-in,
+        curacao:port15-out,
+        curacao:port20-in,
+        curacao:port20-out .
 
 curacao:location a nml:Location .
 
@@ -69,22 +61,19 @@ curacao:nsa a nsi:NSA;
     nsi:managing curacao:topology .
 
 curacao:topology a nml:Topology;
-    nml:hasBidirectionalPort curacao:bi-curacao-aruba,
-        curacao:bi-curacao-dominica;
-    nml:hasInboundPort curacao:aruba-curacao,
-        curacao:dominica-curacao;
-    nml:hasOutboundPort curacao:curacao-aruba,
-        curacao:curacao-dominica;
+    nml:hasBidirectionalPort curacao:bi-curacao;
+    nml:hasInboundPort curacao:port15-in,
+        curacao:port20-in;
+    nml:hasOutboundPort curacao:port15-out,
+        curacao:port20-out;
     nml:locatedAt curacao:location;
     nsi:managedBy curacao:nsa .
 
-dominica:bi-dominica-bonaire a nml:BidirectionalPort;
-    nml:hasPort dominica:bonaire-dominica,
-        dominica:dominica-bonaire .
-
-dominica:bi-dominica-curacao a nml:BidirectionalPort;
-    nml:hasPort dominica:curacao-dominica,
-        dominica:dominica-curacao .
+dominica:bi-dominica a nml:BidirectionalPort;
+    nml:hasPort dominica:port15-in,
+        dominica:port15-out,
+        dominica:port25-in,
+        dominica:port25-out .
 
 dominica:location a nml:Location .
 
@@ -92,76 +81,75 @@ dominica:nsa a nsi:NSA;
     nsi:managing dominica:topology .
 
 dominica:topology a nml:Topology;
-    nml:hasBidirectionalPort dominica:bi-dominica-bonaire,
-        dominica:bi-dominica-curacao;
-    nml:hasInboundPort dominica:bonaire-dominica,
-        dominica:curacao-dominica;
-    nml:hasOutboundPort dominica:dominica-bonaire,
-        dominica:dominica-curacao;
+    nml:hasBidirectionalPort dominica:bi-dominica;
+    nml:hasInboundPort dominica:port15-in,
+        dominica:port25-in;
+    nml:hasOutboundPort dominica:port15-out,
+        dominica:port25-out;
     nml:locatedAt dominica:location;
     nsi:managedBy dominica:nsa .
 
-aruba:aruba-bonaire a nml:PortGroup;
-    nml:isAlias bonaire:aruba-bonaire;
+aruba:port10-in a nml:PortGroup;
+    nml:isAlias bonaire:port10-out;
     nmleth:vlans "1780-1799" .
 
-aruba:aruba-curacao a nml:PortGroup;
-    nml:isAlias curacao:aruba-curacao;
+aruba:port10-out a nml:PortGroup;
+    nml:isAlias bonaire:port10-in;
     nmleth:vlans "1780-1799" .
 
-aruba:bonaire-aruba a nml:PortGroup;
-    nml:isAlias bonaire:bonaire-aruba;
+aruba:port20-in a nml:PortGroup;
+    nml:isAlias curacao:port10-out;
     nmleth:vlans "1780-1799" .
 
-aruba:curacao-aruba a nml:PortGroup;
-    nml:isAlias curacao:curacao-aruba;
+aruba:port20-out a nml:PortGroup;
+    nml:isAlias curacao:port10-in;
     nmleth:vlans "1780-1799" .
 
-bonaire:aruba-bonaire a nml:PortGroup;
-    nml:isAlias aruba:aruba-bonaire;
+bonaire:port15-in a nml:PortGroup;
+    nml:isAlias aruba:port15-out;
     nmleth:vlans "1780-1799" .
 
-bonaire:bonaire-aruba a nml:PortGroup;
-    nml:isAlias aruba:bonaire-aruba;
+bonaire:port15-out a nml:PortGroup;
+    nml:isAlias aruba:port15-in;
     nmleth:vlans "1780-1799" .
 
-bonaire:bonaire-dominica a nml:PortGroup;
-    nml:isAlias dominica:bonaire-dominica;
+bonaire:port20-in a nml:PortGroup;
+    nml:isAlias dominica:port20-out;
     nmleth:vlans "1780-1799" .
 
-bonaire:dominica-bonaire a nml:PortGroup;
-    nml:isAlias dominica:dominica-bonaire;
+bonaire:port20-out a nml:PortGroup;
+    nml:isAlias dominica:port20-in;
     nmleth:vlans "1780-1799" .
 
-curacao:aruba-curacao a nml:PortGroup;
-    nml:isAlias aruba:aruba-curacao;
+curacao:port15-in a nml:PortGroup;
+    nml:isAlias aruba:port25-out;
     nmleth:vlans "1780-1799" .
 
-curacao:curacao-aruba a nml:PortGroup;
-    nml:isAlias aruba:curacao-aruba;
+curacao:port15-out a nml:PortGroup;
+    nml:isAlias aruba:port25-in;
     nmleth:vlans "1780-1799" .
 
-curacao:curacao-dominica a nml:PortGroup;
-    nml:isAlias dominica:curacao-dominica;
+curacao:port20-in a nml:PortGroup;
+    nml:isAlias dominica:port10-out;
     nmleth:vlans "1780-1799" .
 
-curacao:dominica-curacao a nml:PortGroup;
-    nml:isAlias dominica:dominica-curacao;
+curacao:port20-out a nml:PortGroup;
+    nml:isAlias dominica:port10-in;
     nmleth:vlans "1780-1799" .
 
-dominica:bonaire-dominica a nml:PortGroup;
-    nml:isAlias bonaire:bonaire-dominica;
+dominica:port15-in a nml:PortGroup;
+    nml:isAlias curacao:port25-out;
     nmleth:vlans "1780-1799" .
 
-dominica:curacao-dominica a nml:PortGroup;
-    nml:isAlias curacao:curacao-dominica;
+dominica:port15-out a nml:PortGroup;
+    nml:isAlias curacao:port25-in;
     nmleth:vlans "1780-1799" .
 
-dominica:dominica-bonaire a nml:PortGroup;
-    nml:isAlias bonaire:dominica-bonaire;
+dominica:port25-in a nml:PortGroup;
+    nml:isAlias bonaire:port25-out;
     nmleth:vlans "1780-1799" .
 
-dominica:dominica-curacao a nml:PortGroup;
-    nml:isAlias curacao:dominica-curacao;
+dominica:port25-out a nml:PortGroup;
+    nml:isAlias bonaire:port25-in;
     nmleth:vlans "1780-1799" .
 

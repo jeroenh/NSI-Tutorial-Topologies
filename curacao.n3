@@ -10,13 +10,11 @@ nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
 <urn:ogf:network:dominica:2013:topology> a nml:Topology .
 
-curacao:bi-curacao-aruba a nml:BidirectionalPort;
-    nml:hasPort curacao:aruba-curacao,
-        curacao:curacao-aruba .
-
-curacao:bi-curacao-dominica a nml:BidirectionalPort;
-    nml:hasPort curacao:curacao-dominica,
-        curacao:dominica-curacao .
+curacao:bi-curacao a nml:BidirectionalPort;
+    nml:hasPort curacao:port15-in,
+        curacao:port15-out,
+        curacao:port20-in,
+        curacao:port20-out .
 
 curacao:location a nml:Location .
 
@@ -24,28 +22,27 @@ curacao:nsa a nsi:NSA;
     nsi:managing curacao:topology .
 
 curacao:topology a nml:Topology;
-    nml:hasBidirectionalPort curacao:bi-curacao-aruba,
-        curacao:bi-curacao-dominica;
-    nml:hasInboundPort curacao:aruba-curacao,
-        curacao:dominica-curacao;
-    nml:hasOutboundPort curacao:curacao-aruba,
-        curacao:curacao-dominica;
+    nml:hasBidirectionalPort curacao:bi-curacao;
+    nml:hasInboundPort curacao:port15-in,
+        curacao:port20-in;
+    nml:hasOutboundPort curacao:port15-out,
+        curacao:port20-out;
     nml:locatedAt curacao:location;
     nsi:managedBy curacao:nsa .
 
-curacao:aruba-curacao a nml:PortGroup;
-    nml:isAlias <urn:ogf:network:aruba:2013:aruba-curacao>;
+curacao:port15-in a nml:PortGroup;
+    nml:isAlias <urn:ogf:network:aruba:2013:port25-out>;
     nmleth:vlans "1780-1799" .
 
-curacao:curacao-aruba a nml:PortGroup;
-    nml:isAlias <urn:ogf:network:aruba:2013:curacao-aruba>;
+curacao:port15-out a nml:PortGroup;
+    nml:isAlias <urn:ogf:network:aruba:2013:port25-in>;
     nmleth:vlans "1780-1799" .
 
-curacao:curacao-dominica a nml:PortGroup;
-    nml:isAlias <urn:ogf:network:dominica:2013:curacao-dominica>;
+curacao:port20-in a nml:PortGroup;
+    nml:isAlias <urn:ogf:network:dominica:2013:port10-out>;
     nmleth:vlans "1780-1799" .
 
-curacao:dominica-curacao a nml:PortGroup;
-    nml:isAlias <urn:ogf:network:dominica:2013:dominica-curacao>;
+curacao:port20-out a nml:PortGroup;
+    nml:isAlias <urn:ogf:network:dominica:2013:port10-in>;
     nmleth:vlans "1780-1799" .
 

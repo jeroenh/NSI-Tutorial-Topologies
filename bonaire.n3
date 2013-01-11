@@ -10,13 +10,11 @@ nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
 <urn:ogf:network:dominica:2013:topology> a nml:Topology .
 
-bonaire:bi-bonaire-aruba a nml:BidirectionalPort;
-    nml:hasPort bonaire:aruba-bonaire,
-        bonaire:bonaire-aruba .
-
-bonaire:bi-bonaire-dominica a nml:BidirectionalPort;
-    nml:hasPort bonaire:bonaire-dominica,
-        bonaire:dominica-bonaire .
+bonaire:bi-bonaire a nml:BidirectionalPort;
+    nml:hasPort bonaire:port15-in,
+        bonaire:port15-out,
+        bonaire:port20-in,
+        bonaire:port20-out .
 
 bonaire:location a nml:Location .
 
@@ -24,28 +22,27 @@ bonaire:nsa a nsi:NSA;
     nsi:managing bonaire:topology .
 
 bonaire:topology a nml:Topology;
-    nml:hasBidirectionalPort bonaire:bi-bonaire-aruba,
-        bonaire:bi-bonaire-dominica;
-    nml:hasInboundPort bonaire:aruba-bonaire,
-        bonaire:dominica-bonaire;
-    nml:hasOutboundPort bonaire:bonaire-aruba,
-        bonaire:bonaire-dominica;
+    nml:hasBidirectionalPort bonaire:bi-bonaire;
+    nml:hasInboundPort bonaire:port15-in,
+        bonaire:port20-in;
+    nml:hasOutboundPort bonaire:port15-out,
+        bonaire:port20-out;
     nml:locatedAt bonaire:location;
     nsi:managedBy bonaire:nsa .
 
-bonaire:aruba-bonaire a nml:PortGroup;
-    nml:isAlias <urn:ogf:network:aruba:2013:aruba-bonaire>;
+bonaire:port15-in a nml:PortGroup;
+    nml:isAlias <urn:ogf:network:aruba:2013:port15-out>;
     nmleth:vlans "1780-1799" .
 
-bonaire:bonaire-aruba a nml:PortGroup;
-    nml:isAlias <urn:ogf:network:aruba:2013:bonaire-aruba>;
+bonaire:port15-out a nml:PortGroup;
+    nml:isAlias <urn:ogf:network:aruba:2013:port15-in>;
     nmleth:vlans "1780-1799" .
 
-bonaire:bonaire-dominica a nml:PortGroup;
-    nml:isAlias <urn:ogf:network:dominica:2013:bonaire-dominica>;
+bonaire:port20-in a nml:PortGroup;
+    nml:isAlias <urn:ogf:network:dominica:2013:port20-out>;
     nmleth:vlans "1780-1799" .
 
-bonaire:dominica-bonaire a nml:PortGroup;
-    nml:isAlias <urn:ogf:network:dominica:2013:dominica-bonaire>;
+bonaire:port20-out a nml:PortGroup;
+    nml:isAlias <urn:ogf:network:dominica:2013:port20-in>;
     nmleth:vlans "1780-1799" .
 

@@ -10,13 +10,11 @@ nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
 <urn:ogf:network:curacao:2013:topology> a nml:Topology .
 
-dominica:bi-dominica-bonaire a nml:BidirectionalPort;
-    nml:hasPort dominica:bonaire-dominica,
-        dominica:dominica-bonaire .
-
-dominica:bi-dominica-curacao a nml:BidirectionalPort;
-    nml:hasPort dominica:curacao-dominica,
-        dominica:dominica-curacao .
+dominica:bi-dominica a nml:BidirectionalPort;
+    nml:hasPort dominica:port15-in,
+        dominica:port15-out,
+        dominica:port25-in,
+        dominica:port25-out .
 
 dominica:location a nml:Location .
 
@@ -24,28 +22,27 @@ dominica:nsa a nsi:NSA;
     nsi:managing dominica:topology .
 
 dominica:topology a nml:Topology;
-    nml:hasBidirectionalPort dominica:bi-dominica-bonaire,
-        dominica:bi-dominica-curacao;
-    nml:hasInboundPort dominica:bonaire-dominica,
-        dominica:curacao-dominica;
-    nml:hasOutboundPort dominica:dominica-bonaire,
-        dominica:dominica-curacao;
+    nml:hasBidirectionalPort dominica:bi-dominica;
+    nml:hasInboundPort dominica:port15-in,
+        dominica:port25-in;
+    nml:hasOutboundPort dominica:port15-out,
+        dominica:port25-out;
     nml:locatedAt dominica:location;
     nsi:managedBy dominica:nsa .
 
-dominica:bonaire-dominica a nml:PortGroup;
-    nml:isAlias <urn:ogf:network:bonaire:2013:bonaire-dominica>;
+dominica:port15-in a nml:PortGroup;
+    nml:isAlias <urn:ogf:network:curacao:2013:port25-out>;
     nmleth:vlans "1780-1799" .
 
-dominica:curacao-dominica a nml:PortGroup;
-    nml:isAlias <urn:ogf:network:curacao:2013:curacao-dominica>;
+dominica:port15-out a nml:PortGroup;
+    nml:isAlias <urn:ogf:network:curacao:2013:port25-in>;
     nmleth:vlans "1780-1799" .
 
-dominica:dominica-bonaire a nml:PortGroup;
-    nml:isAlias <urn:ogf:network:bonaire:2013:dominica-bonaire>;
+dominica:port25-in a nml:PortGroup;
+    nml:isAlias <urn:ogf:network:bonaire:2013:port25-out>;
     nmleth:vlans "1780-1799" .
 
-dominica:dominica-curacao a nml:PortGroup;
-    nml:isAlias <urn:ogf:network:curacao:2013:dominica-curacao>;
+dominica:port25-out a nml:PortGroup;
+    nml:isAlias <urn:ogf:network:bonaire:2013:port25-in>;
     nmleth:vlans "1780-1799" .
 
