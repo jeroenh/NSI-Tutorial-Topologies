@@ -6,15 +6,15 @@
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-<urn:ogf:network:aruba:2013:topology> a nml:Topology .
-
 <urn:ogf:network:dominica:2013:topology> a nml:Topology .
 
 bonaire:bi-bonaire a nml:BidirectionalPort;
-    nml:hasPort bonaire:port15-in,
-        bonaire:port15-out,
-        bonaire:port20-in,
-        bonaire:port20-out .
+    nml:hasPort bonaire:port10-in,
+        bonaire:port10-out,
+        bonaire:port22-in,
+        bonaire:port22-out,
+        bonaire:port7-in,
+        bonaire:port7-out .
 
 bonaire:location a nml:Location .
 
@@ -23,26 +23,32 @@ bonaire:nsa a nsi:NSA;
 
 bonaire:topology a nml:Topology;
     nml:hasBidirectionalPort bonaire:bi-bonaire;
-    nml:hasInboundPort bonaire:port15-in,
-        bonaire:port20-in;
-    nml:hasOutboundPort bonaire:port15-out,
-        bonaire:port20-out;
+    nml:hasInboundPort bonaire:port10-in,
+        bonaire:port22-in,
+        bonaire:port7-in;
+    nml:hasOutboundPort bonaire:port10-out,
+        bonaire:port22-out,
+        bonaire:port7-out;
     nml:locatedAt bonaire:location;
     nsi:managedBy bonaire:nsa .
 
-bonaire:port15-in a nml:PortGroup;
-    nml:isAlias <urn:ogf:network:aruba:2013:port15-out>;
+bonaire:port10-in a nml:PortGroup;
+    nml:isAlias <urn:ogf:network:dominica:2013:port10-out>;
     nmleth:vlans "1780-1799" .
 
-bonaire:port15-out a nml:PortGroup;
-    nml:isAlias <urn:ogf:network:aruba:2013:port15-in>;
+bonaire:port10-out a nml:PortGroup;
+    nml:isAlias <urn:ogf:network:dominica:2013:port10-in>;
     nmleth:vlans "1780-1799" .
 
-bonaire:port20-in a nml:PortGroup;
-    nml:isAlias <urn:ogf:network:dominica:2013:port20-out>;
+bonaire:port22-in a nml:PortGroup;
     nmleth:vlans "1780-1799" .
 
-bonaire:port20-out a nml:PortGroup;
-    nml:isAlias <urn:ogf:network:dominica:2013:port20-in>;
+bonaire:port22-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+bonaire:port7-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+bonaire:port7-out a nml:PortGroup;
     nmleth:vlans "1780-1799" .
 

@@ -6,15 +6,13 @@
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-<urn:ogf:network:bonaire:2013:topology> a nml:Topology .
-
 <urn:ogf:network:curacao:2013:topology> a nml:Topology .
 
 aruba:bi-aruba a nml:BidirectionalPort;
     nml:hasPort aruba:port10-in,
         aruba:port10-out,
-        aruba:port20-in,
-        aruba:port20-out .
+        aruba:port15-in,
+        aruba:port15-out .
 
 aruba:location a nml:Location .
 
@@ -24,25 +22,23 @@ aruba:nsa a nsi:NSA;
 aruba:topology a nml:Topology;
     nml:hasBidirectionalPort aruba:bi-aruba;
     nml:hasInboundPort aruba:port10-in,
-        aruba:port20-in;
+        aruba:port15-in;
     nml:hasOutboundPort aruba:port10-out,
-        aruba:port20-out;
+        aruba:port15-out;
     nml:locatedAt aruba:location;
     nsi:managedBy aruba:nsa .
 
 aruba:port10-in a nml:PortGroup;
-    nml:isAlias <urn:ogf:network:bonaire:2013:port10-out>;
-    nmleth:vlans "1780-1799" .
-
-aruba:port10-out a nml:PortGroup;
-    nml:isAlias <urn:ogf:network:bonaire:2013:port10-in>;
-    nmleth:vlans "1780-1799" .
-
-aruba:port20-in a nml:PortGroup;
     nml:isAlias <urn:ogf:network:curacao:2013:port10-out>;
     nmleth:vlans "1780-1799" .
 
-aruba:port20-out a nml:PortGroup;
+aruba:port10-out a nml:PortGroup;
     nml:isAlias <urn:ogf:network:curacao:2013:port10-in>;
+    nmleth:vlans "1780-1799" .
+
+aruba:port15-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+aruba:port15-out a nml:PortGroup;
     nmleth:vlans "1780-1799" .
 

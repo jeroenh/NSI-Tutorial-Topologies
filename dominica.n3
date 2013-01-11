@@ -8,13 +8,11 @@ nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
 <urn:ogf:network:bonaire:2013:topology> a nml:Topology .
 
-<urn:ogf:network:curacao:2013:topology> a nml:Topology .
-
 dominica:bi-dominica a nml:BidirectionalPort;
-    nml:hasPort dominica:port15-in,
-        dominica:port15-out,
-        dominica:port25-in,
-        dominica:port25-out .
+    nml:hasPort dominica:port10-in,
+        dominica:port10-out,
+        dominica:port7-in,
+        dominica:port7-out .
 
 dominica:location a nml:Location .
 
@@ -23,26 +21,24 @@ dominica:nsa a nsi:NSA;
 
 dominica:topology a nml:Topology;
     nml:hasBidirectionalPort dominica:bi-dominica;
-    nml:hasInboundPort dominica:port15-in,
-        dominica:port25-in;
-    nml:hasOutboundPort dominica:port15-out,
-        dominica:port25-out;
+    nml:hasInboundPort dominica:port10-in,
+        dominica:port7-in;
+    nml:hasOutboundPort dominica:port10-out,
+        dominica:port7-out;
     nml:locatedAt dominica:location;
     nsi:managedBy dominica:nsa .
 
-dominica:port15-in a nml:PortGroup;
-    nml:isAlias <urn:ogf:network:curacao:2013:port25-out>;
+dominica:port10-in a nml:PortGroup;
+    nml:isAlias <urn:ogf:network:bonaire:2013:port10-out>;
     nmleth:vlans "1780-1799" .
 
-dominica:port15-out a nml:PortGroup;
-    nml:isAlias <urn:ogf:network:curacao:2013:port25-in>;
+dominica:port10-out a nml:PortGroup;
+    nml:isAlias <urn:ogf:network:bonaire:2013:port10-in>;
     nmleth:vlans "1780-1799" .
 
-dominica:port25-in a nml:PortGroup;
-    nml:isAlias <urn:ogf:network:bonaire:2013:port25-out>;
+dominica:port7-in a nml:PortGroup;
     nmleth:vlans "1780-1799" .
 
-dominica:port25-out a nml:PortGroup;
-    nml:isAlias <urn:ogf:network:bonaire:2013:port25-in>;
+dominica:port7-out a nml:PortGroup;
     nmleth:vlans "1780-1799" .
 

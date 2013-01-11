@@ -1,52 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:nsi="http://schemas.ogf.org/nsi/2012/10/topology#"
   xmlns:nml="http://schemas.ogf.org/nml/2012/10/base#"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:nmleth="http://schemas.ogf.org/nml/2012/10/ethernet#"
-  xmlns:nsi="http://schemas.ogf.org/nsi/2012/10/topology#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
 >
   <rdf:Description rdf:about="http://schemas.ogf.org/nml/2012/10/ethernet#vlans">
     <owl:subPropertyOf rdf:resource="http://schemas.ogf.org/nml/2012/10/base#hasLabelGroup"/>
   </rdf:Description>
   <nml:Topology rdf:about="urn:ogf:network:dominica:2013:topology"/>
-  <nml:Topology rdf:about="urn:ogf:network:aruba:2013:topology"/>
-  <nsi:NSA rdf:about="urn:ogf:network:bonaire:2013:nsa">
-    <nsi:managing>
-      <nml:Topology rdf:about="urn:ogf:network:bonaire:2013:topology">
-        <nml:locatedAt rdf:resource="urn:ogf:network:bonaire:2013:location"/>
-        <nsi:managedBy rdf:resource="urn:ogf:network:bonaire:2013:nsa"/>
-        <nml:hasOutboundPort rdf:resource="urn:ogf:network:bonaire:2013:port20-out"/>
-        <nml:hasOutboundPort rdf:resource="urn:ogf:network:bonaire:2013:port15-out"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:bonaire:2013:port15-in"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:bonaire:2013:port20-in"/>
-        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:bonaire:2013:bi-bonaire"/>
-      </nml:Topology>
-    </nsi:managing>
-  </nsi:NSA>
-  <nml:Location rdf:about="urn:ogf:network:bonaire:2013:location"/>
-  <nml:PortGroup rdf:about="urn:ogf:network:bonaire:2013:port15-out">
+  <nml:PortGroup rdf:about="urn:ogf:network:bonaire:2013:port7-out">
     <nmleth:vlans>1780-1799</nmleth:vlans>
-    <nml:isAlias rdf:resource="urn:ogf:network:aruba:2013:port15-in"/>
   </nml:PortGroup>
-  <nml:PortGroup rdf:about="urn:ogf:network:bonaire:2013:port15-in">
+  <nml:PortGroup rdf:about="urn:ogf:network:bonaire:2013:port10-out">
     <nmleth:vlans>1780-1799</nmleth:vlans>
-    <nml:isAlias rdf:resource="urn:ogf:network:aruba:2013:port15-out"/>
+    <nml:isAlias rdf:resource="urn:ogf:network:dominica:2013:port10-in"/>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:bonaire:2013:port22-in">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
   </nml:PortGroup>
   <nml:BidirectionalPort rdf:about="urn:ogf:network:bonaire:2013:bi-bonaire">
+    <nml:hasPort rdf:resource="urn:ogf:network:bonaire:2013:port7-out"/>
+    <nml:hasPort rdf:resource="urn:ogf:network:bonaire:2013:port10-out"/>
+    <nml:hasPort rdf:resource="urn:ogf:network:bonaire:2013:port22-in"/>
     <nml:hasPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:bonaire:2013:port20-out">
+      <nml:PortGroup rdf:about="urn:ogf:network:bonaire:2013:port22-out">
         <nmleth:vlans>1780-1799</nmleth:vlans>
-        <nml:isAlias rdf:resource="urn:ogf:network:dominica:2013:port20-in"/>
       </nml:PortGroup>
     </nml:hasPort>
-    <nml:hasPort rdf:resource="urn:ogf:network:bonaire:2013:port15-out"/>
-    <nml:hasPort rdf:resource="urn:ogf:network:bonaire:2013:port15-in"/>
     <nml:hasPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:bonaire:2013:port20-in">
+      <nml:PortGroup rdf:about="urn:ogf:network:bonaire:2013:port7-in">
         <nmleth:vlans>1780-1799</nmleth:vlans>
-        <nml:isAlias rdf:resource="urn:ogf:network:dominica:2013:port20-out"/>
+      </nml:PortGroup>
+    </nml:hasPort>
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:bonaire:2013:port10-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+        <nml:isAlias rdf:resource="urn:ogf:network:dominica:2013:port10-out"/>
       </nml:PortGroup>
     </nml:hasPort>
   </nml:BidirectionalPort>
+  <nml:Location rdf:about="urn:ogf:network:bonaire:2013:location"/>
+  <nsi:NSA rdf:about="urn:ogf:network:bonaire:2013:nsa">
+    <nsi:managing>
+      <nml:Topology rdf:about="urn:ogf:network:bonaire:2013:topology">
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:bonaire:2013:port7-out"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:bonaire:2013:port10-out"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:bonaire:2013:port22-out"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:bonaire:2013:port7-in"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:bonaire:2013:port10-in"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:bonaire:2013:port22-in"/>
+        <nml:locatedAt rdf:resource="urn:ogf:network:bonaire:2013:location"/>
+        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:bonaire:2013:bi-bonaire"/>
+        <nsi:managedBy rdf:resource="urn:ogf:network:bonaire:2013:nsa"/>
+      </nml:Topology>
+    </nsi:managing>
+  </nsi:NSA>
 </rdf:RDF>
