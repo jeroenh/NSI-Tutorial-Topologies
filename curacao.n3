@@ -1,4 +1,4 @@
-@prefix curacao: <urn:ogf:network:curacao:2012:> .
+@prefix curacao: <urn:ogf:network:curacao:2013:> .
 @prefix nml: <http://schemas.ogf.org/nml/2012/10/base#> .
 @prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
@@ -6,9 +6,9 @@
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-<urn:ogf:network:aruba:2012:topology> a nml:Topology .
+<urn:ogf:network:aruba:2013:topology> a nml:Topology .
 
-<urn:ogf:network:dominica:2012:topology> a nml:Topology .
+<urn:ogf:network:dominica:2013:topology> a nml:Topology .
 
 curacao:bi-curacao-aruba a nml:BidirectionalPort;
     nml:hasPort curacao:aruba-curacao,
@@ -34,18 +34,18 @@ curacao:topology a nml:Topology;
     nsi:managedBy curacao:nsa .
 
 curacao:aruba-curacao a nml:PortGroup;
-    nml:isAlias <urn:ogf:network:aruba:2012:aruba-curacao>;
+    nml:isAlias <urn:ogf:network:aruba:2013:aruba-curacao>;
     nmleth:vlans "1780-1799" .
 
 curacao:curacao-aruba a nml:PortGroup;
-    nml:isAlias <urn:ogf:network:aruba:2012:curacao-aruba>;
+    nml:isAlias <urn:ogf:network:aruba:2013:curacao-aruba>;
     nmleth:vlans "1780-1799" .
 
 curacao:curacao-dominica a nml:PortGroup;
-    nml:isAlias <urn:ogf:network:dominica:2012:curacao-dominica>;
+    nml:isAlias <urn:ogf:network:dominica:2013:curacao-dominica>;
     nmleth:vlans "1780-1799" .
 
 curacao:dominica-curacao a nml:PortGroup;
-    nml:isAlias <urn:ogf:network:dominica:2012:dominica-curacao>;
+    nml:isAlias <urn:ogf:network:dominica:2013:dominica-curacao>;
     nmleth:vlans "1780-1799" .
 

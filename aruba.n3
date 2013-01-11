@@ -1,4 +1,4 @@
-@prefix aruba: <urn:ogf:network:aruba:2012:> .
+@prefix aruba: <urn:ogf:network:aruba:2013:> .
 @prefix nml: <http://schemas.ogf.org/nml/2012/10/base#> .
 @prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
@@ -6,9 +6,9 @@
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-<urn:ogf:network:bonaire:2012:topology> a nml:Topology .
+<urn:ogf:network:bonaire:2013:topology> a nml:Topology .
 
-<urn:ogf:network:curacao:2012:topology> a nml:Topology .
+<urn:ogf:network:curacao:2013:topology> a nml:Topology .
 
 aruba:bi-aruba-bonaire a nml:BidirectionalPort;
     nml:hasPort aruba:aruba-bonaire,
@@ -34,18 +34,18 @@ aruba:topology a nml:Topology;
     nsi:managedBy aruba:nsa .
 
 aruba:aruba-bonaire a nml:PortGroup;
-    nml:isAlias <urn:ogf:network:bonaire:2012:aruba-bonaire>;
+    nml:isAlias <urn:ogf:network:bonaire:2013:aruba-bonaire>;
     nmleth:vlans "1780-1799" .
 
 aruba:aruba-curacao a nml:PortGroup;
-    nml:isAlias <urn:ogf:network:curacao:2012:aruba-curacao>;
+    nml:isAlias <urn:ogf:network:curacao:2013:aruba-curacao>;
     nmleth:vlans "1780-1799" .
 
 aruba:bonaire-aruba a nml:PortGroup;
-    nml:isAlias <urn:ogf:network:bonaire:2012:bonaire-aruba>;
+    nml:isAlias <urn:ogf:network:bonaire:2013:bonaire-aruba>;
     nmleth:vlans "1780-1799" .
 
 aruba:curacao-aruba a nml:PortGroup;
-    nml:isAlias <urn:ogf:network:curacao:2012:curacao-aruba>;
+    nml:isAlias <urn:ogf:network:curacao:2013:curacao-aruba>;
     nmleth:vlans "1780-1799" .
 

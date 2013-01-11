@@ -6,53 +6,54 @@
   xmlns:nmleth="http://schemas.ogf.org/nml/2012/10/ethernet#"
   xmlns:nsi="http://schemas.ogf.org/nsi/2012/10/topology#"
 >
-  <nml:Topology rdf:about="urn:ogf:network:dominica:2012:topology"/>
+  <nml:Topology rdf:about="urn:ogf:network:dominica:2013:topology"/>
+  <nml:Topology rdf:about="urn:ogf:network:aruba:2013:topology"/>
   <rdf:Description rdf:about="http://schemas.ogf.org/nml/2012/10/ethernet#vlans">
     <owl:subPropertyOf rdf:resource="http://schemas.ogf.org/nml/2012/10/base#hasLabelGroup"/>
   </rdf:Description>
-  <nml:Topology rdf:about="urn:ogf:network:aruba:2012:topology"/>
-  <nml:BidirectionalPort rdf:about="urn:ogf:network:bonaire:2012:bi-bonaire-aruba">
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:bonaire:2013:bi-bonaire-aruba">
     <nml:hasPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:bonaire:2012:aruba-bonaire">
-        <nml:isAlias rdf:resource="urn:ogf:network:aruba:2012:aruba-bonaire"/>
+      <nml:PortGroup rdf:about="urn:ogf:network:bonaire:2013:bonaire-aruba">
+        <nml:isAlias rdf:resource="urn:ogf:network:aruba:2013:bonaire-aruba"/>
         <nmleth:vlans>1780-1799</nmleth:vlans>
       </nml:PortGroup>
     </nml:hasPort>
     <nml:hasPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:bonaire:2012:bonaire-aruba">
-        <nml:isAlias rdf:resource="urn:ogf:network:aruba:2012:bonaire-aruba"/>
+      <nml:PortGroup rdf:about="urn:ogf:network:bonaire:2013:aruba-bonaire">
+        <nml:isAlias rdf:resource="urn:ogf:network:aruba:2013:aruba-bonaire"/>
         <nmleth:vlans>1780-1799</nmleth:vlans>
       </nml:PortGroup>
     </nml:hasPort>
   </nml:BidirectionalPort>
-  <nml:PortGroup rdf:about="urn:ogf:network:bonaire:2012:bonaire-dominica">
-    <nml:isAlias rdf:resource="urn:ogf:network:dominica:2012:bonaire-dominica"/>
-    <nmleth:vlans>1780-1799</nmleth:vlans>
-  </nml:PortGroup>
-  <nml:Topology rdf:about="urn:ogf:network:bonaire:2012:topology">
-    <nml:hasOutboundPort rdf:resource="urn:ogf:network:bonaire:2012:bonaire-dominica"/>
-    <nml:hasOutboundPort rdf:resource="urn:ogf:network:bonaire:2012:bonaire-aruba"/>
-    <nml:locatedAt>
-      <nml:Location rdf:about="urn:ogf:network:bonaire:2012:location"/>
-    </nml:locatedAt>
+  <nml:Topology rdf:about="urn:ogf:network:bonaire:2013:topology">
     <nsi:managedBy>
-      <nsi:NSA rdf:about="urn:ogf:network:bonaire:2012:nsa">
-        <nsi:managing rdf:resource="urn:ogf:network:bonaire:2012:topology"/>
+      <nsi:NSA rdf:about="urn:ogf:network:bonaire:2013:nsa">
+        <nsi:managing rdf:resource="urn:ogf:network:bonaire:2013:topology"/>
       </nsi:NSA>
     </nsi:managedBy>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:bonaire:2013:bi-bonaire-dominica">
+        <nml:hasPort rdf:resource="urn:ogf:network:bonaire:2013:dominica-bonaire"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:bonaire:2013:bonaire-dominica"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:bonaire:2013:bi-bonaire-aruba"/>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:bonaire:2013:aruba-bonaire"/>
     <nml:hasInboundPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:bonaire:2012:dominica-bonaire">
-        <nml:isAlias rdf:resource="urn:ogf:network:dominica:2012:dominica-bonaire"/>
+      <nml:PortGroup rdf:about="urn:ogf:network:bonaire:2013:dominica-bonaire">
+        <nml:isAlias rdf:resource="urn:ogf:network:dominica:2013:dominica-bonaire"/>
         <nmleth:vlans>1780-1799</nmleth:vlans>
       </nml:PortGroup>
     </nml:hasInboundPort>
-    <nml:hasInboundPort rdf:resource="urn:ogf:network:bonaire:2012:aruba-bonaire"/>
-    <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:bonaire:2012:bi-bonaire-aruba"/>
-    <nml:hasBidirectionalPort>
-      <nml:BidirectionalPort rdf:about="urn:ogf:network:bonaire:2012:bi-bonaire-dominica">
-        <nml:hasPort rdf:resource="urn:ogf:network:bonaire:2012:bonaire-dominica"/>
-        <nml:hasPort rdf:resource="urn:ogf:network:bonaire:2012:dominica-bonaire"/>
-      </nml:BidirectionalPort>
-    </nml:hasBidirectionalPort>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:bonaire:2013:bonaire-aruba"/>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:bonaire:2013:bonaire-dominica">
+        <nml:isAlias rdf:resource="urn:ogf:network:dominica:2013:bonaire-dominica"/>
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:locatedAt>
+      <nml:Location rdf:about="urn:ogf:network:bonaire:2013:location"/>
+    </nml:locatedAt>
   </nml:Topology>
 </rdf:RDF>
