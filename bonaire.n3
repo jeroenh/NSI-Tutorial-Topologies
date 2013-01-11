@@ -19,6 +19,7 @@ bonaire:bi-bonaire a nml:BidirectionalPort;
 bonaire:location a nml:Location .
 
 bonaire:nsa a nsi:NSA;
+    nsi:csProviderEndpoint "http://192.168.1.152:9080/NSI/services/CS2";
     nsi:managing bonaire:topology .
 
 bonaire:topology a nml:Topology;

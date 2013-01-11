@@ -17,6 +17,7 @@ dominica:bi-dominica a nml:BidirectionalPort;
 dominica:location a nml:Location .
 
 dominica:nsa a nsi:NSA;
+    nsi:csProviderEndpoint "http://192.168.1.154:28080/nsi2/services/ConnectionProvider";
     nsi:managing dominica:topology .
 
 dominica:topology a nml:Topology;
