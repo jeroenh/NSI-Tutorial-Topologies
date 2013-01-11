@@ -6,7 +6,8 @@
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-<urn:ogf:network:aruba:2013:topology> a nml:Topology .
+<urn:ogf:network:aruba:2013:topology> a nml:Topology;
+    nsi:isReference "https://raw.github.com/jeroenh/NSI-Tutorial-Topologies/master/aruba.n3" .
 
 curacao:bi-curacao a nml:BidirectionalPort;
     nml:hasPort curacao:port10-in,

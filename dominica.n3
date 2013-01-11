@@ -6,7 +6,8 @@
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-<urn:ogf:network:bonaire:2013:topology> a nml:Topology .
+<urn:ogf:network:bonaire:2013:topology> a nml:Topology;
+    nsi:isReference "https://raw.github.com/jeroenh/NSI-Tutorial-Topologies/master/bonaire.n3" .
 
 dominica:bi-dominica a nml:BidirectionalPort;
     nml:hasPort dominica:port10-in,
