@@ -18,7 +18,7 @@ aruba:bi-aruba a nml:BidirectionalPort;
 aruba:location a nml:Location .
 
 aruba:nsa a nsi:NSA;
-    nsi:csProviderEndpoint "http://192.168.1.151:28080/nsi2/services/ConnectionProvider";
+    nsi:csProviderEndpoint "http://192.168.1.11:28380/nsi2_gl_proxy/services/ConnectionProvider";
     nsi:managing aruba:topology .
 
 aruba:topology a nml:Topology;

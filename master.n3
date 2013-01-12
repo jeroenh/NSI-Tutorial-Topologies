@@ -18,7 +18,7 @@ aruba:bi-aruba a nml:BidirectionalPort;
 aruba:location a nml:Location .
 
 aruba:nsa a nsi:NSA;
-    nsi:csProviderEndpoint "http://192.168.1.151:28080/nsi2/services/ConnectionProvider";
+    nsi:csProviderEndpoint "http://192.168.1.11:28380/nsi2_gl_proxy/services/ConnectionProvider";
     nsi:managing aruba:topology .
 
 aruba:topology a nml:Topology;
@@ -41,7 +41,7 @@ bonaire:bi-bonaire a nml:BidirectionalPort;
 bonaire:location a nml:Location .
 
 bonaire:nsa a nsi:NSA;
-    nsi:csProviderEndpoint "http://192.168.1.152:9080/NSI/services/CS2";
+    nsi:csProviderEndpoint "http://192.168.1.13:9080/NSI/services/CS2";
     nsi:managing bonaire:topology .
 
 bonaire:topology a nml:Topology;
@@ -66,7 +66,7 @@ curacao:bi-curacao a nml:BidirectionalPort;
 curacao:location a nml:Location .
 
 curacao:nsa a nsi:NSA;
-    nsi:csProviderEndpoint "http://192.168.1.153:8288/ConnectionService";
+    nsi:csProviderEndpoint "http://192.168.1.14:8288/ConnectionService";
     nsi:managing curacao:topology .
 
 curacao:topology a nml:Topology;
@@ -89,7 +89,7 @@ dominica:bi-dominica a nml:BidirectionalPort;
 dominica:location a nml:Location .
 
 dominica:nsa a nsi:NSA;
-    nsi:csProviderEndpoint "http://192.168.1.154:28080/nsi2/services/ConnectionProvider";
+    nsi:csProviderEndpoint "http://192.168.1.11:28380/nsi2_gl_proxy/services/ConnectionProvider";
     nsi:managing dominica:topology .
 
 dominica:topology a nml:Topology;

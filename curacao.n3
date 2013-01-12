@@ -20,7 +20,7 @@ curacao:bi-curacao a nml:BidirectionalPort;
 curacao:location a nml:Location .
 
 curacao:nsa a nsi:NSA;
-    nsi:csProviderEndpoint "http://192.168.1.153:8288/ConnectionService";
+    nsi:csProviderEndpoint "http://192.168.1.14:8288/ConnectionService";
     nsi:managing curacao:topology .
 
 curacao:topology a nml:Topology;

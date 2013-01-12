@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:nsi="http://schemas.ogf.org/nsi/2012/10/topology#"
   xmlns:nml="http://schemas.ogf.org/nml/2012/10/base#"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:nmleth="http://schemas.ogf.org/nml/2012/10/ethernet#"
-  xmlns:nsi="http://schemas.ogf.org/nsi/2012/10/topology#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
 >
   <nml:Topology rdf:about="urn:ogf:network:dominica:2013:topology">
     <nsi:isReference>https://raw.github.com/jeroenh/NSI-Tutorial-Topologies/master/dominica.n3</nsi:isReference>
@@ -12,50 +12,54 @@
   <rdf:Description rdf:about="http://schemas.ogf.org/nml/2012/10/ethernet#vlans">
     <owl:subPropertyOf rdf:resource="http://schemas.ogf.org/nml/2012/10/base#hasLabelGroup"/>
   </rdf:Description>
-  <nml:PortGroup rdf:about="urn:ogf:network:bonaire:2013:port22-out">
-    <nmleth:vlans>1780-1799</nmleth:vlans>
-  </nml:PortGroup>
-  <nml:PortGroup rdf:about="urn:ogf:network:bonaire:2013:port10-in">
-    <nmleth:vlans>1780-1799</nmleth:vlans>
-    <nml:isAlias rdf:resource="urn:ogf:network:dominica:2013:port10-out"/>
-  </nml:PortGroup>
-  <nsi:NSA rdf:about="urn:ogf:network:bonaire:2013:nsa">
-    <nsi:managing>
-      <nml:Topology rdf:about="urn:ogf:network:bonaire:2013:topology">
-        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:bonaire:2013:bi-bonaire"/>
-        <nml:locatedAt rdf:resource="urn:ogf:network:bonaire:2013:location"/>
-        <nml:hasOutboundPort rdf:resource="urn:ogf:network:bonaire:2013:port10-out"/>
-        <nml:hasOutboundPort rdf:resource="urn:ogf:network:bonaire:2013:port22-out"/>
-        <nml:hasOutboundPort rdf:resource="urn:ogf:network:bonaire:2013:port7-out"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:bonaire:2013:port10-in"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:bonaire:2013:port7-in"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:bonaire:2013:port22-in"/>
-        <nsi:managedBy rdf:resource="urn:ogf:network:bonaire:2013:nsa"/>
-      </nml:Topology>
-    </nsi:managing>
-    <nsi:csProviderEndpoint>http://192.168.1.152:9080/NSI/services/CS2</nsi:csProviderEndpoint>
-  </nsi:NSA>
   <nml:Location rdf:about="urn:ogf:network:bonaire:2013:location"/>
-  <nml:PortGroup rdf:about="urn:ogf:network:bonaire:2013:port10-out">
-    <nmleth:vlans>1780-1799</nmleth:vlans>
-    <nml:isAlias rdf:resource="urn:ogf:network:dominica:2013:port10-in"/>
-  </nml:PortGroup>
-  <nml:PortGroup rdf:about="urn:ogf:network:bonaire:2013:port22-in">
-    <nmleth:vlans>1780-1799</nmleth:vlans>
-  </nml:PortGroup>
-  <nml:PortGroup rdf:about="urn:ogf:network:bonaire:2013:port7-out">
+  <nml:PortGroup rdf:about="urn:ogf:network:bonaire:2013:port7-in">
     <nmleth:vlans>1780-1799</nmleth:vlans>
   </nml:PortGroup>
   <nml:BidirectionalPort rdf:about="urn:ogf:network:bonaire:2013:bi-bonaire">
-    <nml:hasPort rdf:resource="urn:ogf:network:bonaire:2013:port22-out"/>
-    <nml:hasPort rdf:resource="urn:ogf:network:bonaire:2013:port10-in"/>
+    <nml:hasPort rdf:resource="urn:ogf:network:bonaire:2013:port7-in"/>
     <nml:hasPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:bonaire:2013:port7-in">
+      <nml:PortGroup rdf:about="urn:ogf:network:bonaire:2013:port7-out">
         <nmleth:vlans>1780-1799</nmleth:vlans>
       </nml:PortGroup>
     </nml:hasPort>
-    <nml:hasPort rdf:resource="urn:ogf:network:bonaire:2013:port10-out"/>
-    <nml:hasPort rdf:resource="urn:ogf:network:bonaire:2013:port22-in"/>
-    <nml:hasPort rdf:resource="urn:ogf:network:bonaire:2013:port7-out"/>
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:bonaire:2013:port22-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:bonaire:2013:port10-out">
+        <nml:isAlias rdf:resource="urn:ogf:network:dominica:2013:port10-in"/>
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:bonaire:2013:port10-in">
+        <nml:isAlias rdf:resource="urn:ogf:network:dominica:2013:port10-out"/>
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:bonaire:2013:port22-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
   </nml:BidirectionalPort>
+  <nml:Topology rdf:about="urn:ogf:network:bonaire:2013:topology">
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:bonaire:2013:port7-in"/>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:bonaire:2013:port10-in"/>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:bonaire:2013:port22-in"/>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:bonaire:2013:port10-out"/>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:bonaire:2013:port7-out"/>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:bonaire:2013:port22-out"/>
+    <nml:locatedAt rdf:resource="urn:ogf:network:bonaire:2013:location"/>
+    <nsi:managedBy>
+      <nsi:NSA rdf:about="urn:ogf:network:bonaire:2013:nsa">
+        <nsi:csProviderEndpoint>http://192.168.1.13:9080/NSI/services/CS2</nsi:csProviderEndpoint>
+        <nsi:managing rdf:resource="urn:ogf:network:bonaire:2013:topology"/>
+      </nsi:NSA>
+    </nsi:managedBy>
+    <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:bonaire:2013:bi-bonaire"/>
+  </nml:Topology>
 </rdf:RDF>
