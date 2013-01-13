@@ -11,11 +11,14 @@ nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
 <urn:ogf:network:ets.aruba.ex:2013> a nml:Topology;
     nml:hasBidirectionalPort aruba:port10,
-        aruba:port15;
+        aruba:port15,
+        aruba:port20;
     nml:hasInboundPort aruba:port10-in,
-        aruba:port15-in;
+        aruba:port15-in,
+        aruba:port20-in;
     nml:hasOutboundPort aruba:port10-out,
-        aruba:port15-out;
+        aruba:port15-out,
+        aruba:port20-out;
     nml:locatedAt aruba:location;
     nsi:managedBy aruba:nsa .
 
@@ -33,14 +36,21 @@ aruba:port15 a nml:BidirectionalPort;
     nml:hasPort aruba:port15-in,
         aruba:port15-out .
 
+aruba:port20 a nml:BidirectionalPort;
+    nml:hasPort aruba:port20-in,
+        aruba:port20-out .
+
 <urn:ogf:network:ets.bonaire.ex:2013> a nml:Topology;
     nml:hasBidirectionalPort bonaire:port10,
+        bonaire:port20,
         bonaire:port22,
         bonaire:port7;
     nml:hasInboundPort bonaire:port10-in,
+        bonaire:port20-in,
         bonaire:port22-in,
         bonaire:port7-in;
     nml:hasOutboundPort bonaire:port10-out,
+        bonaire:port20-out,
         bonaire:port22-out,
         bonaire:port7-out;
     nml:locatedAt bonaire:location;
@@ -55,6 +65,10 @@ bonaire:nsa a nsi:NSA;
 bonaire:port10 a nml:BidirectionalPort;
     nml:hasPort bonaire:port10-in,
         bonaire:port10-out .
+
+bonaire:port20 a nml:BidirectionalPort;
+    nml:hasPort bonaire:port20-in,
+        bonaire:port20-out .
 
 bonaire:port22 a nml:BidirectionalPort;
     nml:hasPort bonaire:port22-in,
@@ -97,10 +111,13 @@ curacao:port4 a nml:BidirectionalPort;
 
 <urn:ogf:network:ets.dominica.ex:2013> a nml:Topology;
     nml:hasBidirectionalPort dominica:port10,
+        dominica:port20,
         dominica:port7;
     nml:hasInboundPort dominica:port10-in,
+        dominica:port20-in,
         dominica:port7-in;
     nml:hasOutboundPort dominica:port10-out,
+        dominica:port20-out,
         dominica:port7-out;
     nml:locatedAt dominica:location;
     nsi:managedBy dominica:nsa .
@@ -114,6 +131,10 @@ dominica:nsa a nsi:NSA;
 dominica:port10 a nml:BidirectionalPort;
     nml:hasPort dominica:port10-in,
         dominica:port10-out .
+
+dominica:port20 a nml:BidirectionalPort;
+    nml:hasPort dominica:port20-in,
+        dominica:port20-out .
 
 dominica:port7 a nml:BidirectionalPort;
     nml:hasPort dominica:port7-in,
@@ -137,12 +158,6 @@ bonaire:port7-in a nml:PortGroup;
 bonaire:port7-out a nml:PortGroup;
     nmleth:vlans "1780-1799" .
 
-curacao:port20-in a nml:PortGroup;
-    nmleth:vlans "1780-1799" .
-
-curacao:port20-out a nml:PortGroup;
-    nmleth:vlans "1780-1799" .
-
 curacao:port4-in a nml:PortGroup;
     nmleth:vlans "1780-1799" .
 
@@ -163,12 +178,28 @@ aruba:port10-out a nml:PortGroup;
     nml:isAlias curacao:port10-in;
     nmleth:vlans "1780-1799" .
 
+aruba:port20-in a nml:PortGroup;
+    nml:isAlias bonaire:port20-out;
+    nmleth:vlans "1780-1799" .
+
+aruba:port20-out a nml:PortGroup;
+    nml:isAlias bonaire:port20-in;
+    nmleth:vlans "1780-1799" .
+
 bonaire:port10-in a nml:PortGroup;
     nml:isAlias dominica:port10-out;
     nmleth:vlans "1780-1799" .
 
 bonaire:port10-out a nml:PortGroup;
     nml:isAlias dominica:port10-in;
+    nmleth:vlans "1780-1799" .
+
+bonaire:port20-in a nml:PortGroup;
+    nml:isAlias aruba:port20-out;
+    nmleth:vlans "1780-1799" .
+
+bonaire:port20-out a nml:PortGroup;
+    nml:isAlias aruba:port20-in;
     nmleth:vlans "1780-1799" .
 
 curacao:port10-in a nml:PortGroup;
@@ -179,11 +210,27 @@ curacao:port10-out a nml:PortGroup;
     nml:isAlias aruba:port10-in;
     nmleth:vlans "1780-1799" .
 
+curacao:port20-in a nml:PortGroup;
+    nml:isAlias dominica:port20-out;
+    nmleth:vlans "1780-1799" .
+
+curacao:port20-out a nml:PortGroup;
+    nml:isAlias dominica:port20-in;
+    nmleth:vlans "1780-1799" .
+
 dominica:port10-in a nml:PortGroup;
     nml:isAlias bonaire:port10-out;
     nmleth:vlans "1780-1799" .
 
 dominica:port10-out a nml:PortGroup;
     nml:isAlias bonaire:port10-in;
+    nmleth:vlans "1780-1799" .
+
+dominica:port20-in a nml:PortGroup;
+    nml:isAlias curacao:port20-out;
+    nmleth:vlans "1780-1799" .
+
+dominica:port20-out a nml:PortGroup;
+    nml:isAlias curacao:port20-in;
     nmleth:vlans "1780-1799" .
 

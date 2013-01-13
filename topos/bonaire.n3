@@ -6,17 +6,23 @@
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
+<urn:ogf:network:ets.aruba.ex:2013> a nml:Topology;
+    nsi:isReference "https://raw.github.com/jeroenh/NSI-Tutorial-Topologies/master/topos/aruba.n3" .
+
 <urn:ogf:network:ets.dominica.ex:2013> a nml:Topology;
-    nsi:isReference "https://raw.github.com/jeroenh/NSI-Tutorial-Topologies/master/dominica.n3" .
+    nsi:isReference "https://raw.github.com/jeroenh/NSI-Tutorial-Topologies/master/topos/dominica.n3" .
 
 <urn:ogf:network:ets.bonaire.ex:2013> a nml:Topology;
     nml:hasBidirectionalPort bonaire:port10,
+        bonaire:port20,
         bonaire:port22,
         bonaire:port7;
     nml:hasInboundPort bonaire:port10-in,
+        bonaire:port20-in,
         bonaire:port22-in,
         bonaire:port7-in;
     nml:hasOutboundPort bonaire:port10-out,
+        bonaire:port20-out,
         bonaire:port22-out,
         bonaire:port7-out;
     nml:locatedAt bonaire:location;
@@ -32,6 +38,10 @@ bonaire:port10 a nml:BidirectionalPort;
     nml:hasPort bonaire:port10-in,
         bonaire:port10-out .
 
+bonaire:port20 a nml:BidirectionalPort;
+    nml:hasPort bonaire:port20-in,
+        bonaire:port20-out .
+
 bonaire:port22 a nml:BidirectionalPort;
     nml:hasPort bonaire:port22-in,
         bonaire:port22-out .
@@ -46,6 +56,14 @@ bonaire:port10-in a nml:PortGroup;
 
 bonaire:port10-out a nml:PortGroup;
     nml:isAlias <urn:ogf:network:ets.dominica.ex:2013:port10-in>;
+    nmleth:vlans "1780-1799" .
+
+bonaire:port20-in a nml:PortGroup;
+    nml:isAlias <urn:ogf:network:ets.aruba.ex:2013:port20-out>;
+    nmleth:vlans "1780-1799" .
+
+bonaire:port20-out a nml:PortGroup;
+    nml:isAlias <urn:ogf:network:ets.aruba.ex:2013:port20-in>;
     nmleth:vlans "1780-1799" .
 
 bonaire:port22-in a nml:PortGroup;
