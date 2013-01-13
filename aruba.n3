@@ -6,24 +6,10 @@
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-<urn:ogf:network:ets.curacao.ex:2013:topology> a nml:Topology;
+<urn:ogf:network:ets.curacao.ex:2013> a nml:Topology;
     nsi:isReference "https://raw.github.com/jeroenh/NSI-Tutorial-Topologies/master/curacao.n3" .
 
-aruba:location a nml:Location .
-
-aruba:nsa a nsi:NSA;
-    nsi:csProviderEndpoint "http://192.168.1.11:28380/nsi2_gl_proxy/services/ConnectionProvider";
-    nsi:managing aruba:topology .
-
-aruba:port10 a nml:BidirectionalPort;
-    nml:hasPort aruba:port10-in,
-        aruba:port10-out .
-
-aruba:port15 a nml:BidirectionalPort;
-    nml:hasPort aruba:port15-in,
-        aruba:port15-out .
-
-aruba:topology a nml:Topology;
+<urn:ogf:network:ets.aruba.ex:2013> a nml:Topology;
     nml:hasBidirectionalPort aruba:port10,
         aruba:port15;
     nml:hasInboundPort aruba:port10-in,
@@ -32,6 +18,20 @@ aruba:topology a nml:Topology;
         aruba:port15-out;
     nml:locatedAt aruba:location;
     nsi:managedBy aruba:nsa .
+
+aruba:location a nml:Location .
+
+aruba:nsa a nsi:NSA;
+    nsi:csProviderEndpoint "http://192.168.1.11:28380/nsi2_gl_proxy/services/ConnectionProvider";
+    nsi:managing <urn:ogf:network:ets.aruba.ex:2013> .
+
+aruba:port10 a nml:BidirectionalPort;
+    nml:hasPort aruba:port10-in,
+        aruba:port10-out .
+
+aruba:port15 a nml:BidirectionalPort;
+    nml:hasPort aruba:port15-in,
+        aruba:port15-out .
 
 aruba:port10-in a nml:PortGroup;
     nml:isAlias <urn:ogf:network:ets.curacao.ex:2013:port10-out>;

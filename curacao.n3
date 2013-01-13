@@ -6,14 +6,27 @@
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-<urn:ogf:network:ets.aruba.ex:2013:topology> a nml:Topology;
+<urn:ogf:network:ets.aruba.ex:2013> a nml:Topology;
     nsi:isReference "https://raw.github.com/jeroenh/NSI-Tutorial-Topologies/master/aruba.n3" .
+
+<urn:ogf:network:ets.curacao.ex:2013> a nml:Topology;
+    nml:hasBidirectionalPort curacao:port10,
+        curacao:port20,
+        curacao:port4;
+    nml:hasInboundPort curacao:port10-in,
+        curacao:port20-in,
+        curacao:port4-in;
+    nml:hasOutboundPort curacao:port10-out,
+        curacao:port20-out,
+        curacao:port4-out;
+    nml:locatedAt curacao:location;
+    nsi:managedBy curacao:nsa .
 
 curacao:location a nml:Location .
 
 curacao:nsa a nsi:NSA;
     nsi:csProviderEndpoint "http://192.168.1.14:8288/ConnectionService";
-    nsi:managing curacao:topology .
+    nsi:managing <urn:ogf:network:ets.curacao.ex:2013> .
 
 curacao:port10 a nml:BidirectionalPort;
     nml:hasPort curacao:port10-in,
@@ -26,19 +39,6 @@ curacao:port20 a nml:BidirectionalPort;
 curacao:port4 a nml:BidirectionalPort;
     nml:hasPort curacao:port4-in,
         curacao:port4-out .
-
-curacao:topology a nml:Topology;
-    nml:hasBidirectionalPort curacao:port10,
-        curacao:port20,
-        curacao:port4;
-    nml:hasInboundPort curacao:port10-in,
-        curacao:port20-in,
-        curacao:port4-in;
-    nml:hasOutboundPort curacao:port10-out,
-        curacao:port20-out,
-        curacao:port4-out;
-    nml:locatedAt curacao:location;
-    nsi:managedBy curacao:nsa .
 
 curacao:port10-in a nml:PortGroup;
     nml:isAlias <urn:ogf:network:ets.aruba.ex:2013:port10-out>;

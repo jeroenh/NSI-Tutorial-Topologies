@@ -6,48 +6,50 @@
   xmlns:nmleth="http://schemas.ogf.org/nml/2012/10/ethernet#"
   xmlns:owl="http://www.w3.org/2002/07/owl#"
 >
-  <nml:Topology rdf:about="urn:ogf:network:ets.curacao.ex:2013:topology">
+  <nml:Topology rdf:about="urn:ogf:network:ets.curacao.ex:2013">
     <nsi:isReference>https://raw.github.com/jeroenh/NSI-Tutorial-Topologies/master/curacao.n3</nsi:isReference>
   </nml:Topology>
   <rdf:Description rdf:about="http://schemas.ogf.org/nml/2012/10/ethernet#vlans">
     <owl:subPropertyOf rdf:resource="http://schemas.ogf.org/nml/2012/10/base#hasLabelGroup"/>
   </rdf:Description>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port15-in">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
   <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port15-out">
     <nmleth:vlans>1780-1799</nmleth:vlans>
   </nml:PortGroup>
   <nsi:NSA rdf:about="urn:ogf:network:ets.aruba.ex:2013:nsa">
     <nsi:csProviderEndpoint>http://192.168.1.11:28380/nsi2_gl_proxy/services/ConnectionProvider</nsi:csProviderEndpoint>
     <nsi:managing>
-      <nml:Topology rdf:about="urn:ogf:network:ets.aruba.ex:2013:topology">
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port10-in"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port15-in"/>
-        <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port15-out"/>
-        <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port10-out"/>
-        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port10"/>
+      <nml:Topology rdf:about="urn:ogf:network:ets.aruba.ex:2013">
         <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port15"/>
-        <nsi:managedBy rdf:resource="urn:ogf:network:ets.aruba.ex:2013:nsa"/>
+        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port10"/>
         <nml:locatedAt rdf:resource="urn:ogf:network:ets.aruba.ex:2013:location"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port15-in"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port10-in"/>
+        <nsi:managedBy rdf:resource="urn:ogf:network:ets.aruba.ex:2013:nsa"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port10-out"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port15-out"/>
       </nml:Topology>
     </nsi:managing>
   </nsi:NSA>
-  <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port10-out">
-    <nml:isAlias rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port10-in"/>
-    <nmleth:vlans>1780-1799</nmleth:vlans>
-  </nml:PortGroup>
-  <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port15-in">
-    <nmleth:vlans>1780-1799</nmleth:vlans>
-  </nml:PortGroup>
-  <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port10-in">
-    <nml:isAlias rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port10-out"/>
-    <nmleth:vlans>1780-1799</nmleth:vlans>
-  </nml:PortGroup>
   <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.aruba.ex:2013:port10">
-    <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port10-in"/>
-    <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port10-out"/>
-  </nml:BidirectionalPort>
-  <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.aruba.ex:2013:port15">
-    <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port15-out"/>
-    <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port15-in"/>
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port10-out">
+        <nml:isAlias rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port10-in"/>
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port10-in">
+        <nml:isAlias rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port10-out"/>
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
   </nml:BidirectionalPort>
   <nml:Location rdf:about="urn:ogf:network:ets.aruba.ex:2013:location"/>
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.aruba.ex:2013:port15">
+    <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port15-in"/>
+    <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port15-out"/>
+  </nml:BidirectionalPort>
 </rdf:RDF>
