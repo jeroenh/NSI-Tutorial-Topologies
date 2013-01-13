@@ -19,17 +19,157 @@ dominica:port10 a nml:BidirectionalPort;
     nml:hasPort dominica:port10-in,
         dominica:port10-out .
 
+dominica:port11 a nml:BidirectionalPort;
+    nml:hasPort dominica:port11-in,
+        dominica:port11-out .
+
+dominica:port12 a nml:BidirectionalPort;
+    nml:hasPort dominica:port12-in,
+        dominica:port12-out .
+
+dominica:port13 a nml:BidirectionalPort;
+    nml:hasPort dominica:port13-in,
+        dominica:port13-out .
+
+dominica:port14 a nml:BidirectionalPort;
+    nml:hasPort dominica:port14-in,
+        dominica:port14-out .
+
+dominica:port15 a nml:BidirectionalPort;
+    nml:hasPort dominica:port15-in,
+        dominica:port15-out .
+
+dominica:port16 a nml:BidirectionalPort;
+    nml:hasPort dominica:port16-in,
+        dominica:port16-out .
+
+dominica:port17 a nml:BidirectionalPort;
+    nml:hasPort dominica:port17-in,
+        dominica:port17-out .
+
+dominica:port18 a nml:BidirectionalPort;
+    nml:hasPort dominica:port18-in,
+        dominica:port18-out .
+
+dominica:port19 a nml:BidirectionalPort;
+    nml:hasPort dominica:port19-in,
+        dominica:port19-out .
+
+dominica:port20 a nml:BidirectionalPort;
+    nml:hasPort dominica:port20-in,
+        dominica:port20-out .
+
+dominica:port21 a nml:BidirectionalPort;
+    nml:hasPort dominica:port21-in,
+        dominica:port21-out .
+
+dominica:port22 a nml:BidirectionalPort;
+    nml:hasPort dominica:port22-in,
+        dominica:port22-out .
+
+dominica:port23 a nml:BidirectionalPort;
+    nml:hasPort dominica:port23-in,
+        dominica:port23-out .
+
+dominica:port24 a nml:BidirectionalPort;
+    nml:hasPort dominica:port24-in,
+        dominica:port24-out .
+
+dominica:port3 a nml:BidirectionalPort;
+    nml:hasPort dominica:port3-in,
+        dominica:port3-out .
+
+dominica:port4 a nml:BidirectionalPort;
+    nml:hasPort dominica:port4-in,
+        dominica:port4-out .
+
+dominica:port5 a nml:BidirectionalPort;
+    nml:hasPort dominica:port5-in,
+        dominica:port5-out .
+
+dominica:port6 a nml:BidirectionalPort;
+    nml:hasPort dominica:port6-in,
+        dominica:port6-out .
+
 dominica:port7 a nml:BidirectionalPort;
     nml:hasPort dominica:port7-in,
         dominica:port7-out .
 
+dominica:port8 a nml:BidirectionalPort;
+    nml:hasPort dominica:port8-in,
+        dominica:port8-out .
+
+dominica:port9 a nml:BidirectionalPort;
+    nml:hasPort dominica:port9-in,
+        dominica:port9-out .
+
 dominica:topology a nml:Topology;
     nml:hasBidirectionalPort dominica:port10,
-        dominica:port7;
+        dominica:port11,
+        dominica:port12,
+        dominica:port13,
+        dominica:port14,
+        dominica:port15,
+        dominica:port16,
+        dominica:port17,
+        dominica:port18,
+        dominica:port19,
+        dominica:port20,
+        dominica:port21,
+        dominica:port22,
+        dominica:port23,
+        dominica:port24,
+        dominica:port3,
+        dominica:port4,
+        dominica:port5,
+        dominica:port6,
+        dominica:port7,
+        dominica:port8,
+        dominica:port9;
     nml:hasInboundPort dominica:port10-in,
-        dominica:port7-in;
+        dominica:port11-in,
+        dominica:port12-in,
+        dominica:port13-in,
+        dominica:port14-in,
+        dominica:port15-in,
+        dominica:port16-in,
+        dominica:port17-in,
+        dominica:port18-in,
+        dominica:port19-in,
+        dominica:port20-in,
+        dominica:port21-in,
+        dominica:port22-in,
+        dominica:port23-in,
+        dominica:port24-in,
+        dominica:port3-in,
+        dominica:port4-in,
+        dominica:port5-in,
+        dominica:port6-in,
+        dominica:port7-in,
+        dominica:port8-in,
+        dominica:port9-in;
     nml:hasOutboundPort dominica:port10-out,
-        dominica:port7-out;
+        dominica:port11-out,
+        dominica:port12-out,
+        dominica:port13-out,
+        dominica:port14-out,
+        dominica:port15-out,
+        dominica:port16-out,
+        dominica:port17-out,
+        dominica:port18-out,
+        dominica:port19-out,
+        dominica:port20-out,
+        dominica:port21-out,
+        dominica:port22-out,
+        dominica:port23-out,
+        dominica:port24-out,
+        dominica:port3-out,
+        dominica:port4-out,
+        dominica:port5-out,
+        dominica:port6-out,
+        dominica:port7-out,
+        dominica:port8-out,
+        dominica:port9-out;
     nml:locatedAt dominica:location;
     nsi:managedBy dominica:nsa .
 
@@ -41,9 +181,129 @@ dominica:port10-out a nml:PortGroup;
     nml:isAlias <urn:ogf:network:ets.bonaire.ex:2013:port10-in>;
     nmleth:vlans "1780-1799" .
 
+dominica:port11-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+dominica:port11-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+dominica:port12-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+dominica:port12-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+dominica:port13-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+dominica:port13-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+dominica:port14-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+dominica:port14-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+dominica:port15-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+dominica:port15-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+dominica:port16-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+dominica:port16-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+dominica:port17-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+dominica:port17-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+dominica:port18-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+dominica:port18-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+dominica:port19-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+dominica:port19-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+dominica:port20-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+dominica:port20-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+dominica:port21-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+dominica:port21-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+dominica:port22-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+dominica:port22-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+dominica:port23-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+dominica:port23-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+dominica:port24-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+dominica:port24-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+dominica:port3-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+dominica:port3-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+dominica:port4-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+dominica:port4-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+dominica:port5-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+dominica:port5-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+dominica:port6-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+dominica:port6-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
 dominica:port7-in a nml:PortGroup;
     nmleth:vlans "1780-1799" .
 
 dominica:port7-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+dominica:port8-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+dominica:port8-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+dominica:port9-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+dominica:port9-out a nml:PortGroup;
     nmleth:vlans "1780-1799" .
 

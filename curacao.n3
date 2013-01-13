@@ -19,24 +19,157 @@ curacao:port10 a nml:BidirectionalPort;
     nml:hasPort curacao:port10-in,
         curacao:port10-out .
 
+curacao:port11 a nml:BidirectionalPort;
+    nml:hasPort curacao:port11-in,
+        curacao:port11-out .
+
+curacao:port12 a nml:BidirectionalPort;
+    nml:hasPort curacao:port12-in,
+        curacao:port12-out .
+
+curacao:port13 a nml:BidirectionalPort;
+    nml:hasPort curacao:port13-in,
+        curacao:port13-out .
+
+curacao:port14 a nml:BidirectionalPort;
+    nml:hasPort curacao:port14-in,
+        curacao:port14-out .
+
+curacao:port15 a nml:BidirectionalPort;
+    nml:hasPort curacao:port15-in,
+        curacao:port15-out .
+
+curacao:port16 a nml:BidirectionalPort;
+    nml:hasPort curacao:port16-in,
+        curacao:port16-out .
+
+curacao:port17 a nml:BidirectionalPort;
+    nml:hasPort curacao:port17-in,
+        curacao:port17-out .
+
+curacao:port18 a nml:BidirectionalPort;
+    nml:hasPort curacao:port18-in,
+        curacao:port18-out .
+
+curacao:port19 a nml:BidirectionalPort;
+    nml:hasPort curacao:port19-in,
+        curacao:port19-out .
+
 curacao:port20 a nml:BidirectionalPort;
     nml:hasPort curacao:port20-in,
         curacao:port20-out .
+
+curacao:port21 a nml:BidirectionalPort;
+    nml:hasPort curacao:port21-in,
+        curacao:port21-out .
+
+curacao:port22 a nml:BidirectionalPort;
+    nml:hasPort curacao:port22-in,
+        curacao:port22-out .
+
+curacao:port23 a nml:BidirectionalPort;
+    nml:hasPort curacao:port23-in,
+        curacao:port23-out .
+
+curacao:port24 a nml:BidirectionalPort;
+    nml:hasPort curacao:port24-in,
+        curacao:port24-out .
+
+curacao:port3 a nml:BidirectionalPort;
+    nml:hasPort curacao:port3-in,
+        curacao:port3-out .
 
 curacao:port4 a nml:BidirectionalPort;
     nml:hasPort curacao:port4-in,
         curacao:port4-out .
 
+curacao:port5 a nml:BidirectionalPort;
+    nml:hasPort curacao:port5-in,
+        curacao:port5-out .
+
+curacao:port6 a nml:BidirectionalPort;
+    nml:hasPort curacao:port6-in,
+        curacao:port6-out .
+
+curacao:port7 a nml:BidirectionalPort;
+    nml:hasPort curacao:port7-in,
+        curacao:port7-out .
+
+curacao:port8 a nml:BidirectionalPort;
+    nml:hasPort curacao:port8-in,
+        curacao:port8-out .
+
+curacao:port9 a nml:BidirectionalPort;
+    nml:hasPort curacao:port9-in,
+        curacao:port9-out .
+
 curacao:topology a nml:Topology;
     nml:hasBidirectionalPort curacao:port10,
+        curacao:port11,
+        curacao:port12,
+        curacao:port13,
+        curacao:port14,
+        curacao:port15,
+        curacao:port16,
+        curacao:port17,
+        curacao:port18,
+        curacao:port19,
         curacao:port20,
-        curacao:port4;
+        curacao:port21,
+        curacao:port22,
+        curacao:port23,
+        curacao:port24,
+        curacao:port3,
+        curacao:port4,
+        curacao:port5,
+        curacao:port6,
+        curacao:port7,
+        curacao:port8,
+        curacao:port9;
     nml:hasInboundPort curacao:port10-in,
+        curacao:port11-in,
+        curacao:port12-in,
+        curacao:port13-in,
+        curacao:port14-in,
+        curacao:port15-in,
+        curacao:port16-in,
+        curacao:port17-in,
+        curacao:port18-in,
+        curacao:port19-in,
         curacao:port20-in,
-        curacao:port4-in;
+        curacao:port21-in,
+        curacao:port22-in,
+        curacao:port23-in,
+        curacao:port24-in,
+        curacao:port3-in,
+        curacao:port4-in,
+        curacao:port5-in,
+        curacao:port6-in,
+        curacao:port7-in,
+        curacao:port8-in,
+        curacao:port9-in;
     nml:hasOutboundPort curacao:port10-out,
+        curacao:port11-out,
+        curacao:port12-out,
+        curacao:port13-out,
+        curacao:port14-out,
+        curacao:port15-out,
+        curacao:port16-out,
+        curacao:port17-out,
+        curacao:port18-out,
+        curacao:port19-out,
         curacao:port20-out,
-        curacao:port4-out;
+        curacao:port21-out,
+        curacao:port22-out,
+        curacao:port23-out,
+        curacao:port24-out,
+        curacao:port3-out,
+        curacao:port4-out,
+        curacao:port5-out,
+        curacao:port6-out,
+        curacao:port7-out,
+        curacao:port8-out,
+        curacao:port9-out;
     nml:locatedAt curacao:location;
     nsi:managedBy curacao:nsa .
 
@@ -48,15 +181,129 @@ curacao:port10-out a nml:PortGroup;
     nml:isAlias <urn:ogf:network:ets.aruba.ex:2013:port10-in>;
     nmleth:vlans "1780-1799" .
 
+curacao:port11-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+curacao:port11-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+curacao:port12-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+curacao:port12-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+curacao:port13-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+curacao:port13-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+curacao:port14-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+curacao:port14-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+curacao:port15-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+curacao:port15-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+curacao:port16-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+curacao:port16-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+curacao:port17-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+curacao:port17-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+curacao:port18-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+curacao:port18-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+curacao:port19-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+curacao:port19-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
 curacao:port20-in a nml:PortGroup;
     nmleth:vlans "1780-1799" .
 
 curacao:port20-out a nml:PortGroup;
     nmleth:vlans "1780-1799" .
 
+curacao:port21-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+curacao:port21-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+curacao:port22-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+curacao:port22-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+curacao:port23-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+curacao:port23-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+curacao:port24-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+curacao:port24-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+curacao:port3-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+curacao:port3-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
 curacao:port4-in a nml:PortGroup;
     nmleth:vlans "1780-1799" .
 
 curacao:port4-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+curacao:port5-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+curacao:port5-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+curacao:port6-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+curacao:port6-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+curacao:port7-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+curacao:port7-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+curacao:port8-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+curacao:port8-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+curacao:port9-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+curacao:port9-out a nml:PortGroup;
     nmleth:vlans "1780-1799" .
 

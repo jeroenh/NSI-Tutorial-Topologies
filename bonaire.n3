@@ -19,24 +19,157 @@ bonaire:port10 a nml:BidirectionalPort;
     nml:hasPort bonaire:port10-in,
         bonaire:port10-out .
 
+bonaire:port11 a nml:BidirectionalPort;
+    nml:hasPort bonaire:port11-in,
+        bonaire:port11-out .
+
+bonaire:port12 a nml:BidirectionalPort;
+    nml:hasPort bonaire:port12-in,
+        bonaire:port12-out .
+
+bonaire:port13 a nml:BidirectionalPort;
+    nml:hasPort bonaire:port13-in,
+        bonaire:port13-out .
+
+bonaire:port14 a nml:BidirectionalPort;
+    nml:hasPort bonaire:port14-in,
+        bonaire:port14-out .
+
+bonaire:port15 a nml:BidirectionalPort;
+    nml:hasPort bonaire:port15-in,
+        bonaire:port15-out .
+
+bonaire:port16 a nml:BidirectionalPort;
+    nml:hasPort bonaire:port16-in,
+        bonaire:port16-out .
+
+bonaire:port17 a nml:BidirectionalPort;
+    nml:hasPort bonaire:port17-in,
+        bonaire:port17-out .
+
+bonaire:port18 a nml:BidirectionalPort;
+    nml:hasPort bonaire:port18-in,
+        bonaire:port18-out .
+
+bonaire:port19 a nml:BidirectionalPort;
+    nml:hasPort bonaire:port19-in,
+        bonaire:port19-out .
+
+bonaire:port20 a nml:BidirectionalPort;
+    nml:hasPort bonaire:port20-in,
+        bonaire:port20-out .
+
+bonaire:port21 a nml:BidirectionalPort;
+    nml:hasPort bonaire:port21-in,
+        bonaire:port21-out .
+
 bonaire:port22 a nml:BidirectionalPort;
     nml:hasPort bonaire:port22-in,
         bonaire:port22-out .
+
+bonaire:port23 a nml:BidirectionalPort;
+    nml:hasPort bonaire:port23-in,
+        bonaire:port23-out .
+
+bonaire:port24 a nml:BidirectionalPort;
+    nml:hasPort bonaire:port24-in,
+        bonaire:port24-out .
+
+bonaire:port3 a nml:BidirectionalPort;
+    nml:hasPort bonaire:port3-in,
+        bonaire:port3-out .
+
+bonaire:port4 a nml:BidirectionalPort;
+    nml:hasPort bonaire:port4-in,
+        bonaire:port4-out .
+
+bonaire:port5 a nml:BidirectionalPort;
+    nml:hasPort bonaire:port5-in,
+        bonaire:port5-out .
+
+bonaire:port6 a nml:BidirectionalPort;
+    nml:hasPort bonaire:port6-in,
+        bonaire:port6-out .
 
 bonaire:port7 a nml:BidirectionalPort;
     nml:hasPort bonaire:port7-in,
         bonaire:port7-out .
 
+bonaire:port8 a nml:BidirectionalPort;
+    nml:hasPort bonaire:port8-in,
+        bonaire:port8-out .
+
+bonaire:port9 a nml:BidirectionalPort;
+    nml:hasPort bonaire:port9-in,
+        bonaire:port9-out .
+
 bonaire:topology a nml:Topology;
     nml:hasBidirectionalPort bonaire:port10,
+        bonaire:port11,
+        bonaire:port12,
+        bonaire:port13,
+        bonaire:port14,
+        bonaire:port15,
+        bonaire:port16,
+        bonaire:port17,
+        bonaire:port18,
+        bonaire:port19,
+        bonaire:port20,
+        bonaire:port21,
         bonaire:port22,
-        bonaire:port7;
+        bonaire:port23,
+        bonaire:port24,
+        bonaire:port3,
+        bonaire:port4,
+        bonaire:port5,
+        bonaire:port6,
+        bonaire:port7,
+        bonaire:port8,
+        bonaire:port9;
     nml:hasInboundPort bonaire:port10-in,
+        bonaire:port11-in,
+        bonaire:port12-in,
+        bonaire:port13-in,
+        bonaire:port14-in,
+        bonaire:port15-in,
+        bonaire:port16-in,
+        bonaire:port17-in,
+        bonaire:port18-in,
+        bonaire:port19-in,
+        bonaire:port20-in,
+        bonaire:port21-in,
         bonaire:port22-in,
-        bonaire:port7-in;
+        bonaire:port23-in,
+        bonaire:port24-in,
+        bonaire:port3-in,
+        bonaire:port4-in,
+        bonaire:port5-in,
+        bonaire:port6-in,
+        bonaire:port7-in,
+        bonaire:port8-in,
+        bonaire:port9-in;
     nml:hasOutboundPort bonaire:port10-out,
+        bonaire:port11-out,
+        bonaire:port12-out,
+        bonaire:port13-out,
+        bonaire:port14-out,
+        bonaire:port15-out,
+        bonaire:port16-out,
+        bonaire:port17-out,
+        bonaire:port18-out,
+        bonaire:port19-out,
+        bonaire:port20-out,
+        bonaire:port21-out,
         bonaire:port22-out,
-        bonaire:port7-out;
+        bonaire:port23-out,
+        bonaire:port24-out,
+        bonaire:port3-out,
+        bonaire:port4-out,
+        bonaire:port5-out,
+        bonaire:port6-out,
+        bonaire:port7-out,
+        bonaire:port8-out,
+        bonaire:port9-out;
     nml:locatedAt bonaire:location;
     nsi:managedBy bonaire:nsa .
 
@@ -48,15 +181,129 @@ bonaire:port10-out a nml:PortGroup;
     nml:isAlias <urn:ogf:network:ets.dominica.ex:2013:port10-in>;
     nmleth:vlans "1780-1799" .
 
+bonaire:port11-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+bonaire:port11-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+bonaire:port12-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+bonaire:port12-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+bonaire:port13-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+bonaire:port13-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+bonaire:port14-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+bonaire:port14-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+bonaire:port15-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+bonaire:port15-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+bonaire:port16-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+bonaire:port16-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+bonaire:port17-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+bonaire:port17-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+bonaire:port18-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+bonaire:port18-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+bonaire:port19-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+bonaire:port19-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+bonaire:port20-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+bonaire:port20-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+bonaire:port21-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+bonaire:port21-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
 bonaire:port22-in a nml:PortGroup;
     nmleth:vlans "1780-1799" .
 
 bonaire:port22-out a nml:PortGroup;
     nmleth:vlans "1780-1799" .
 
+bonaire:port23-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+bonaire:port23-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+bonaire:port24-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+bonaire:port24-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+bonaire:port3-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+bonaire:port3-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+bonaire:port4-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+bonaire:port4-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+bonaire:port5-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+bonaire:port5-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+bonaire:port6-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+bonaire:port6-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
 bonaire:port7-in a nml:PortGroup;
     nmleth:vlans "1780-1799" .
 
 bonaire:port7-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+bonaire:port8-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+bonaire:port8-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+bonaire:port9-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+bonaire:port9-out a nml:PortGroup;
     nmleth:vlans "1780-1799" .
 

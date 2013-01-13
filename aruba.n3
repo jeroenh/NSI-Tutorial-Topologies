@@ -19,17 +19,157 @@ aruba:port10 a nml:BidirectionalPort;
     nml:hasPort aruba:port10-in,
         aruba:port10-out .
 
+aruba:port11 a nml:BidirectionalPort;
+    nml:hasPort aruba:port11-in,
+        aruba:port11-out .
+
+aruba:port12 a nml:BidirectionalPort;
+    nml:hasPort aruba:port12-in,
+        aruba:port12-out .
+
+aruba:port13 a nml:BidirectionalPort;
+    nml:hasPort aruba:port13-in,
+        aruba:port13-out .
+
+aruba:port14 a nml:BidirectionalPort;
+    nml:hasPort aruba:port14-in,
+        aruba:port14-out .
+
 aruba:port15 a nml:BidirectionalPort;
     nml:hasPort aruba:port15-in,
         aruba:port15-out .
 
+aruba:port16 a nml:BidirectionalPort;
+    nml:hasPort aruba:port16-in,
+        aruba:port16-out .
+
+aruba:port17 a nml:BidirectionalPort;
+    nml:hasPort aruba:port17-in,
+        aruba:port17-out .
+
+aruba:port18 a nml:BidirectionalPort;
+    nml:hasPort aruba:port18-in,
+        aruba:port18-out .
+
+aruba:port19 a nml:BidirectionalPort;
+    nml:hasPort aruba:port19-in,
+        aruba:port19-out .
+
+aruba:port20 a nml:BidirectionalPort;
+    nml:hasPort aruba:port20-in,
+        aruba:port20-out .
+
+aruba:port21 a nml:BidirectionalPort;
+    nml:hasPort aruba:port21-in,
+        aruba:port21-out .
+
+aruba:port22 a nml:BidirectionalPort;
+    nml:hasPort aruba:port22-in,
+        aruba:port22-out .
+
+aruba:port23 a nml:BidirectionalPort;
+    nml:hasPort aruba:port23-in,
+        aruba:port23-out .
+
+aruba:port24 a nml:BidirectionalPort;
+    nml:hasPort aruba:port24-in,
+        aruba:port24-out .
+
+aruba:port3 a nml:BidirectionalPort;
+    nml:hasPort aruba:port3-in,
+        aruba:port3-out .
+
+aruba:port4 a nml:BidirectionalPort;
+    nml:hasPort aruba:port4-in,
+        aruba:port4-out .
+
+aruba:port5 a nml:BidirectionalPort;
+    nml:hasPort aruba:port5-in,
+        aruba:port5-out .
+
+aruba:port6 a nml:BidirectionalPort;
+    nml:hasPort aruba:port6-in,
+        aruba:port6-out .
+
+aruba:port7 a nml:BidirectionalPort;
+    nml:hasPort aruba:port7-in,
+        aruba:port7-out .
+
+aruba:port8 a nml:BidirectionalPort;
+    nml:hasPort aruba:port8-in,
+        aruba:port8-out .
+
+aruba:port9 a nml:BidirectionalPort;
+    nml:hasPort aruba:port9-in,
+        aruba:port9-out .
+
 aruba:topology a nml:Topology;
     nml:hasBidirectionalPort aruba:port10,
-        aruba:port15;
+        aruba:port11,
+        aruba:port12,
+        aruba:port13,
+        aruba:port14,
+        aruba:port15,
+        aruba:port16,
+        aruba:port17,
+        aruba:port18,
+        aruba:port19,
+        aruba:port20,
+        aruba:port21,
+        aruba:port22,
+        aruba:port23,
+        aruba:port24,
+        aruba:port3,
+        aruba:port4,
+        aruba:port5,
+        aruba:port6,
+        aruba:port7,
+        aruba:port8,
+        aruba:port9;
     nml:hasInboundPort aruba:port10-in,
-        aruba:port15-in;
+        aruba:port11-in,
+        aruba:port12-in,
+        aruba:port13-in,
+        aruba:port14-in,
+        aruba:port15-in,
+        aruba:port16-in,
+        aruba:port17-in,
+        aruba:port18-in,
+        aruba:port19-in,
+        aruba:port20-in,
+        aruba:port21-in,
+        aruba:port22-in,
+        aruba:port23-in,
+        aruba:port24-in,
+        aruba:port3-in,
+        aruba:port4-in,
+        aruba:port5-in,
+        aruba:port6-in,
+        aruba:port7-in,
+        aruba:port8-in,
+        aruba:port9-in;
     nml:hasOutboundPort aruba:port10-out,
-        aruba:port15-out;
+        aruba:port11-out,
+        aruba:port12-out,
+        aruba:port13-out,
+        aruba:port14-out,
+        aruba:port15-out,
+        aruba:port16-out,
+        aruba:port17-out,
+        aruba:port18-out,
+        aruba:port19-out,
+        aruba:port20-out,
+        aruba:port21-out,
+        aruba:port22-out,
+        aruba:port23-out,
+        aruba:port24-out,
+        aruba:port3-out,
+        aruba:port4-out,
+        aruba:port5-out,
+        aruba:port6-out,
+        aruba:port7-out,
+        aruba:port8-out,
+        aruba:port9-out;
     nml:locatedAt aruba:location;
     nsi:managedBy aruba:nsa .
 
@@ -41,9 +181,129 @@ aruba:port10-out a nml:PortGroup;
     nml:isAlias <urn:ogf:network:ets.curacao.ex:2013:port10-in>;
     nmleth:vlans "1780-1799" .
 
+aruba:port11-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+aruba:port11-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+aruba:port12-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+aruba:port12-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+aruba:port13-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+aruba:port13-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+aruba:port14-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+aruba:port14-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
 aruba:port15-in a nml:PortGroup;
     nmleth:vlans "1780-1799" .
 
 aruba:port15-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+aruba:port16-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+aruba:port16-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+aruba:port17-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+aruba:port17-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+aruba:port18-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+aruba:port18-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+aruba:port19-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+aruba:port19-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+aruba:port20-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+aruba:port20-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+aruba:port21-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+aruba:port21-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+aruba:port22-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+aruba:port22-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+aruba:port23-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+aruba:port23-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+aruba:port24-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+aruba:port24-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+aruba:port3-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+aruba:port3-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+aruba:port4-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+aruba:port4-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+aruba:port5-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+aruba:port5-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+aruba:port6-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+aruba:port6-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+aruba:port7-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+aruba:port7-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+aruba:port8-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+aruba:port8-out a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+aruba:port9-in a nml:PortGroup;
+    nmleth:vlans "1780-1799" .
+
+aruba:port9-out a nml:PortGroup;
     nmleth:vlans "1780-1799" .
 

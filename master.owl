@@ -9,32 +9,564 @@
   <rdf:Description rdf:about="http://schemas.ogf.org/nml/2012/10/ethernet#vlans">
     <owl:subPropertyOf rdf:resource="http://schemas.ogf.org/nml/2012/10/base#hasLabelGroup"/>
   </rdf:Description>
-  <nml:Topology rdf:about="urn:ogf:network:ets.curacao.ex:2013:topology">
-    <nml:locatedAt>
-      <nml:Location rdf:about="urn:ogf:network:ets.curacao.ex:2013:location"/>
-    </nml:locatedAt>
-    <nml:hasInboundPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port20-in">
-        <nmleth:vlans>1780-1799</nmleth:vlans>
-      </nml:PortGroup>
-    </nml:hasInboundPort>
-    <nml:hasInboundPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port10-in">
-        <nmleth:vlans>1780-1799</nmleth:vlans>
-        <nml:isAlias rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port10-out"/>
-      </nml:PortGroup>
-    </nml:hasInboundPort>
-    <nml:hasInboundPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port4-in">
-        <nmleth:vlans>1780-1799</nmleth:vlans>
-      </nml:PortGroup>
-    </nml:hasInboundPort>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port18-out">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port6-out">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:Topology rdf:about="urn:ogf:network:ets.aruba.ex:2013:topology">
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.aruba.ex:2013:port12">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port12-in"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port12-out"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.aruba.ex:2013:port14">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port14-out"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port14-in"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.aruba.ex:2013:port13">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port13-out"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port13-in"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.aruba.ex:2013:port8">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port8-in"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port8-out"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.aruba.ex:2013:port7">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port7-in"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port7-out"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.aruba.ex:2013:port17">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port17-out"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port17-in"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.aruba.ex:2013:port10">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port10-out"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port10-in"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.aruba.ex:2013:port18">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port18-in"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port18-out"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.aruba.ex:2013:port5">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port5-in"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port5-out"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.aruba.ex:2013:port21">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port21-out"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port21-in"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.aruba.ex:2013:port6">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port6-out"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port6-in"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.aruba.ex:2013:port20">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port20-out"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port20-in"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.aruba.ex:2013:port9">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port9-in"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port9-out"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.aruba.ex:2013:port19">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port19-out"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port19-in"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.aruba.ex:2013:port11">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port11-out"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port11-in"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.aruba.ex:2013:port16">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port16-in"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port16-out"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.aruba.ex:2013:port15">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port15-in"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port15-out"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.aruba.ex:2013:port3">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port3-out"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port3-in"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.aruba.ex:2013:port24">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port24-in"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port24-out"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.aruba.ex:2013:port4">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port4-in"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port4-out"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.aruba.ex:2013:port22">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port22-out"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port22-in"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.aruba.ex:2013:port23">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port23-in"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port23-out"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
     <nsi:managedBy>
-      <nsi:NSA rdf:about="urn:ogf:network:ets.curacao.ex:2013:nsa">
-        <nsi:csProviderEndpoint>http://192.168.1.14:8288/ConnectionService</nsi:csProviderEndpoint>
-        <nsi:managing rdf:resource="urn:ogf:network:ets.curacao.ex:2013:topology"/>
+      <nsi:NSA rdf:about="urn:ogf:network:ets.aruba.ex:2013:nsa">
+        <nsi:managing rdf:resource="urn:ogf:network:ets.aruba.ex:2013:topology"/>
+        <nsi:csProviderEndpoint>http://192.168.1.11:28380/nsi2_gl_proxy/services/ConnectionProvider</nsi:csProviderEndpoint>
       </nsi:NSA>
     </nsi:managedBy>
+    <nml:locatedAt>
+      <nml:Location rdf:about="urn:ogf:network:ets.aruba.ex:2013:location"/>
+    </nml:locatedAt>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port22-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port16-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port24-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port14-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port23-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port11-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port6-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port8-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port4-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port20-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port17-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port5-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port3-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port7-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port21-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port18-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port10-in">
+        <nml:isAlias rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port10-out"/>
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port15-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port12-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port19-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port9-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port13-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port16-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port5-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port15-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port4-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port9-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port21-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port12-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port11-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port18-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port17-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port10-out">
+        <nml:isAlias rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port10-in"/>
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port20-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port8-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port23-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port19-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port22-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port13-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port7-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port14-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port3-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port24-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port6-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+  </nml:Topology>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port4-out">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.curacao.ex:2013:port7">
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port7-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port7-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+  </nml:BidirectionalPort>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port11-out">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port8-in">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port14-out">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port12-in">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port18-out">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port15-in">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port16-out">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.curacao.ex:2013:port8">
+    <nml:hasPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port8-in"/>
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port8-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+  </nml:BidirectionalPort>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port10-out">
+    <nml:isAlias>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port10-in">
+        <nml:isAlias rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port10-out"/>
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:isAlias>
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.curacao.ex:2013:port23">
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port23-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port23-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+  </nml:BidirectionalPort>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port17-in">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port14-in">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port3-out">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port3-in">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.curacao.ex:2013:port13">
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port13-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port13-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+  </nml:BidirectionalPort>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port18-in">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port5-out">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.dominica.ex:2013:port21">
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port21-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port21-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+  </nml:BidirectionalPort>
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port6">
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port6-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port6-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+  </nml:BidirectionalPort>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port20-out">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port11-in">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port23-in">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port18-in">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port17-out">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.dominica.ex:2013:port16">
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port16-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port16-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+  </nml:BidirectionalPort>
+  <nml:Topology rdf:about="urn:ogf:network:ets.curacao.ex:2013:topology">
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.curacao.ex:2013:port11">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port11-out"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port11-in"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.curacao.ex:2013:port24">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port24-out"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port24-in"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port7"/>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.curacao.ex:2013:port10">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port10-in"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port10-out"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.curacao.ex:2013:port6">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port6-out"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port6-in"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port8"/>
+    <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port23"/>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.curacao.ex:2013:port12">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port12-out"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port12-in"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port13"/>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.curacao.ex:2013:port19">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port19-out"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port19-in"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
     <nml:hasBidirectionalPort>
       <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.curacao.ex:2013:port4">
         <nml:hasPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port4-out"/>
@@ -42,176 +574,804 @@
       </nml:BidirectionalPort>
     </nml:hasBidirectionalPort>
     <nml:hasBidirectionalPort>
-      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.curacao.ex:2013:port10">
-        <nml:hasPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port10-out"/>
-        <nml:hasPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port10-in"/>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.curacao.ex:2013:port14">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port14-out"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port14-in"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.curacao.ex:2013:port22">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port22-out"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port22-in"/>
       </nml:BidirectionalPort>
     </nml:hasBidirectionalPort>
     <nml:hasBidirectionalPort>
       <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.curacao.ex:2013:port20">
-        <nml:hasPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port20-in"/>
         <nml:hasPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port20-out"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port20-in"/>
       </nml:BidirectionalPort>
     </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.curacao.ex:2013:port15">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port15-out"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port15-in"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.curacao.ex:2013:port16">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port16-out"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port16-in"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.curacao.ex:2013:port9">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port9-in"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port9-out"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.curacao.ex:2013:port21">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port21-in"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port21-out"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.curacao.ex:2013:port3">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port3-in"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port3-out"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.curacao.ex:2013:port18">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port18-in"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port18-out"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.curacao.ex:2013:port17">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port17-in"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port17-out"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.curacao.ex:2013:port5">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port5-out"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port5-in"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nsi:managedBy>
+      <nsi:NSA rdf:about="urn:ogf:network:ets.curacao.ex:2013:nsa">
+        <nsi:managing rdf:resource="urn:ogf:network:ets.curacao.ex:2013:topology"/>
+        <nsi:csProviderEndpoint>http://192.168.1.14:8288/ConnectionService</nsi:csProviderEndpoint>
+      </nsi:NSA>
+    </nsi:managedBy>
+    <nml:locatedAt>
+      <nml:Location rdf:about="urn:ogf:network:ets.curacao.ex:2013:location"/>
+    </nml:locatedAt>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port9-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port10-in">
+        <nml:isAlias rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port10-out"/>
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port24-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port23-in"/>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port8-in"/>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port6-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port12-in"/>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port15-in"/>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port13-in"/>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port19-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port5-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port3-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port14-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port16-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port18-in"/>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port7-in"/>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port4-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port21-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port17-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port20-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port22-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port11-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port6-out"/>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port17-out"/>
     <nml:hasOutboundPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port4-out">
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port22-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port11-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port18-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port16-out"/>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port8-out"/>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port12-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port19-out">
         <nmleth:vlans>1780-1799</nmleth:vlans>
       </nml:PortGroup>
     </nml:hasOutboundPort>
     <nml:hasOutboundPort>
       <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port10-out">
-        <nmleth:vlans>1780-1799</nmleth:vlans>
         <nml:isAlias rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port10-in"/>
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port5-out"/>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port24-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
       </nml:PortGroup>
     </nml:hasOutboundPort>
     <nml:hasOutboundPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port20-out">
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port15-out">
         <nmleth:vlans>1780-1799</nmleth:vlans>
       </nml:PortGroup>
     </nml:hasOutboundPort>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port21-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port3-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port14-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port23-out"/>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port20-out"/>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port9-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port7-out"/>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.curacao.ex:2013:port4-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port13-out"/>
   </nml:Topology>
-  <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.dominica.ex:2013:port10">
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port10">
     <nml:hasPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port10-out">
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port10-out">
+        <nml:isAlias rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port10-in"/>
         <nmleth:vlans>1780-1799</nmleth:vlans>
-        <nml:isAlias rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port10-in"/>
       </nml:PortGroup>
     </nml:hasPort>
-    <nml:hasPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port10-in">
-        <nmleth:vlans>1780-1799</nmleth:vlans>
-        <nml:isAlias rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port10-out"/>
-      </nml:PortGroup>
-    </nml:hasPort>
+    <nml:hasPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port10-in"/>
   </nml:BidirectionalPort>
-  <nsi:NSA rdf:about="urn:ogf:network:ets.aruba.ex:2013:nsa">
-    <nsi:csProviderEndpoint>http://192.168.1.11:28380/nsi2_gl_proxy/services/ConnectionProvider</nsi:csProviderEndpoint>
-    <nsi:managing>
-      <nml:Topology rdf:about="urn:ogf:network:ets.aruba.ex:2013:topology">
-        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port10"/>
-        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port15"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port15-in"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port10-in"/>
-        <nsi:managedBy rdf:resource="urn:ogf:network:ets.aruba.ex:2013:nsa"/>
-        <nml:locatedAt rdf:resource="urn:ogf:network:ets.aruba.ex:2013:location"/>
-        <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port10-out"/>
-        <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port15-out"/>
-      </nml:Topology>
-    </nsi:managing>
-  </nsi:NSA>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port19-out">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
   <nsi:NSA rdf:about="urn:ogf:network:ets.dominica.ex:2013:nsa">
     <nsi:csProviderEndpoint>http://192.168.1.11:28380/nsi2_gl_proxy/services/ConnectionProvider</nsi:csProviderEndpoint>
     <nsi:managing>
       <nml:Topology rdf:about="urn:ogf:network:ets.dominica.ex:2013:topology">
-        <nml:locatedAt rdf:resource="urn:ogf:network:ets.dominica.ex:2013:location"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port10-in"/>
-        <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port7-in"/>
-        <nsi:managedBy rdf:resource="urn:ogf:network:ets.dominica.ex:2013:nsa"/>
-        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port10"/>
+        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port20"/>
         <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port7"/>
-        <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port10-out"/>
+        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port11"/>
+        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port24"/>
+        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port9"/>
+        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port6"/>
+        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port8"/>
+        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port3"/>
+        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port15"/>
+        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port21"/>
+        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port22"/>
+        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port18"/>
+        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port19"/>
+        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port12"/>
+        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port16"/>
+        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port13"/>
+        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port23"/>
+        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port10"/>
+        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port4"/>
+        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port14"/>
+        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port17"/>
+        <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port5"/>
+        <nsi:managedBy rdf:resource="urn:ogf:network:ets.dominica.ex:2013:nsa"/>
+        <nml:locatedAt rdf:resource="urn:ogf:network:ets.dominica.ex:2013:location"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port21-in"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port6-in"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port5-in"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port11-in"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port3-in"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port17-in"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port13-in"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port14-in"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port10-in"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port18-in"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port22-in"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port7-in"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port9-in"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port23-in"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port4-in"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port19-in"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port15-in"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port24-in"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port8-in"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port16-in"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port12-in"/>
+        <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port20-in"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port6-out"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port19-out"/>
         <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port7-out"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port15-out"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port18-out"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port24-out"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port14-out"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port13-out"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port17-out"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port9-out"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port8-out"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port12-out"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port3-out"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port11-out"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port22-out"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port20-out"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port16-out"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port21-out"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port10-out"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port5-out"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port23-out"/>
+        <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port4-out"/>
       </nml:Topology>
     </nsi:managing>
   </nsi:NSA>
-  <nml:Location rdf:about="urn:ogf:network:ets.dominica.ex:2013:location"/>
-  <nml:Topology rdf:about="urn:ogf:network:ets.bonaire.ex:2013:topology">
-    <nml:locatedAt>
-      <nml:Location rdf:about="urn:ogf:network:ets.bonaire.ex:2013:location"/>
-    </nml:locatedAt>
-    <nml:hasInboundPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port10-in">
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.dominica.ex:2013:port4">
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port4-out">
         <nmleth:vlans>1780-1799</nmleth:vlans>
-        <nml:isAlias rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port10-out"/>
       </nml:PortGroup>
-    </nml:hasInboundPort>
-    <nml:hasInboundPort>
+    </nml:hasPort>
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port4-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+  </nml:BidirectionalPort>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port14-in">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port8-out">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port15">
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port15-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port15-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+  </nml:BidirectionalPort>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port7-in">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port9-in">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.dominica.ex:2013:port11">
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port11-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port11-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+  </nml:BidirectionalPort>
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port22">
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port22-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+    <nml:hasPort>
       <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port22-in">
         <nmleth:vlans>1780-1799</nmleth:vlans>
       </nml:PortGroup>
-    </nml:hasInboundPort>
-    <nml:hasInboundPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port7-in">
+    </nml:hasPort>
+  </nml:BidirectionalPort>
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port18">
+    <nml:hasPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port18-out"/>
+    <nml:hasPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port18-in"/>
+  </nml:BidirectionalPort>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port7-out">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port4">
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port4-in">
         <nmleth:vlans>1780-1799</nmleth:vlans>
       </nml:PortGroup>
-    </nml:hasInboundPort>
-    <nsi:managedBy>
-      <nsi:NSA rdf:about="urn:ogf:network:ets.bonaire.ex:2013:nsa">
-        <nsi:csProviderEndpoint>http://192.168.1.13:9080/NSI/services/CS2</nsi:csProviderEndpoint>
-        <nsi:managing rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:topology"/>
-      </nsi:NSA>
-    </nsi:managedBy>
+    </nml:hasPort>
+    <nml:hasPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port4-out"/>
+  </nml:BidirectionalPort>
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.dominica.ex:2013:port22">
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port22-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port22-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+  </nml:BidirectionalPort>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port12-in">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port24-out">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port17-in">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port8-in">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:Location rdf:about="urn:ogf:network:ets.dominica.ex:2013:location"/>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port14-out">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port23-in">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port24-out">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port9-out">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port3-out">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.dominica.ex:2013:port15">
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port15-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port15-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+  </nml:BidirectionalPort>
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port19">
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port19-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port19-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+  </nml:BidirectionalPort>
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.dominica.ex:2013:port18">
+    <nml:hasPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port18-out"/>
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port18-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+  </nml:BidirectionalPort>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port20-in">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port20-out">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port20-out">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port12-out">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.dominica.ex:2013:port17">
+    <nml:hasPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port17-in"/>
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port17-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+  </nml:BidirectionalPort>
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port9">
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port9-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+    <nml:hasPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port9-in"/>
+  </nml:BidirectionalPort>
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.dominica.ex:2013:port10">
+    <nml:hasPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port10-out"/>
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port10-in">
+        <nml:isAlias rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port10-out"/>
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+  </nml:BidirectionalPort>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port19-in">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port5-in">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port5-in">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port7-in">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port13-in">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port23">
+    <nml:hasPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port23-in"/>
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port23-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+  </nml:BidirectionalPort>
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.dominica.ex:2013:port20">
+    <nml:hasPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port20-in"/>
+    <nml:hasPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port20-out"/>
+  </nml:BidirectionalPort>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port13-in">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port20-in">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port6-in">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port3">
+    <nml:hasPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port3-out"/>
+    <nml:hasPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port3-in"/>
+  </nml:BidirectionalPort>
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.dominica.ex:2013:port23">
+    <nml:hasPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port23-in"/>
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port23-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+  </nml:BidirectionalPort>
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port11">
+    <nml:hasPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port11-out"/>
+    <nml:hasPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port11-in"/>
+  </nml:BidirectionalPort>
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.dominica.ex:2013:port13">
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port13-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+    <nml:hasPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port13-in"/>
+  </nml:BidirectionalPort>
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.dominica.ex:2013:port6">
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port6-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+    <nml:hasPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port6-in"/>
+  </nml:BidirectionalPort>
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port24">
+    <nml:hasPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port24-out"/>
+    <nml:hasPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port24-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasPort>
+  </nml:BidirectionalPort>
+  <nml:Topology rdf:about="urn:ogf:network:ets.bonaire.ex:2013:topology">
+    <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port3"/>
+    <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port22"/>
     <nml:hasBidirectionalPort>
-      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port22">
-        <nml:hasPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port22-in"/>
-        <nml:hasPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port22-out"/>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port13">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port13-out"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port13-in"/>
       </nml:BidirectionalPort>
     </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port17">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port17-out"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port17-in"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port4"/>
     <nml:hasBidirectionalPort>
       <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port7">
         <nml:hasPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port7-out"/>
         <nml:hasPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port7-in"/>
       </nml:BidirectionalPort>
     </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port24"/>
+    <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port18"/>
     <nml:hasBidirectionalPort>
-      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port10">
-        <nml:hasPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port10-in"/>
-        <nml:hasPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port10-out"/>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port8">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port8-in"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port8-out"/>
       </nml:BidirectionalPort>
     </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port14">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port14-in"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port14-out"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port19"/>
+    <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port6"/>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port21">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port21-in"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port21-out"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port9"/>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port20">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port20-out"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port20-in"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port12">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port12-out"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port12-in"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port16">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port16-in"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port16-out"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort>
+      <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port5">
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port5-in"/>
+        <nml:hasPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port5-out"/>
+      </nml:BidirectionalPort>
+    </nml:hasBidirectionalPort>
+    <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port10"/>
+    <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port15"/>
+    <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port23"/>
+    <nml:hasBidirectionalPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port11"/>
+    <nsi:managedBy>
+      <nsi:NSA rdf:about="urn:ogf:network:ets.bonaire.ex:2013:nsa">
+        <nsi:csProviderEndpoint>http://192.168.1.13:9080/NSI/services/CS2</nsi:csProviderEndpoint>
+        <nsi:managing rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:topology"/>
+      </nsi:NSA>
+    </nsi:managedBy>
+    <nml:locatedAt>
+      <nml:Location rdf:about="urn:ogf:network:ets.bonaire.ex:2013:location"/>
+    </nml:locatedAt>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port13-in"/>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port20-in"/>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port9-in"/>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port8-in"/>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port23-in"/>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port17-in"/>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port14-in"/>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port3-in"/>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port18-in"/>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port12-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port16-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port11-in"/>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port24-in"/>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port15-in"/>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port4-in"/>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port19-in"/>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port22-in"/>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port5-in"/>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port7-in"/>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port6-in"/>
+    <nml:hasInboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port21-in">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasInboundPort>
+    <nml:hasInboundPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port10-in"/>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port18-out"/>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port4-out"/>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port16-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port11-out"/>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port6-out"/>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port22-out"/>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port14-out"/>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port23-out"/>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port21-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port24-out"/>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port3-out"/>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port10-out"/>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port20-out"/>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port12-out"/>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port13-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port19-out"/>
     <nml:hasOutboundPort>
       <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port7-out">
         <nmleth:vlans>1780-1799</nmleth:vlans>
       </nml:PortGroup>
     </nml:hasOutboundPort>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port15-out"/>
     <nml:hasOutboundPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port10-out">
-        <nmleth:vlans>1780-1799</nmleth:vlans>
-        <nml:isAlias rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port10-in"/>
-      </nml:PortGroup>
-    </nml:hasOutboundPort>
-    <nml:hasOutboundPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port22-out">
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port5-out">
         <nmleth:vlans>1780-1799</nmleth:vlans>
       </nml:PortGroup>
     </nml:hasOutboundPort>
+    <nml:hasOutboundPort>
+      <nml:PortGroup rdf:about="urn:ogf:network:ets.bonaire.ex:2013:port17-out">
+        <nmleth:vlans>1780-1799</nmleth:vlans>
+      </nml:PortGroup>
+    </nml:hasOutboundPort>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port8-out"/>
+    <nml:hasOutboundPort rdf:resource="urn:ogf:network:ets.bonaire.ex:2013:port9-out"/>
   </nml:Topology>
-  <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port10-in">
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port8-out">
     <nmleth:vlans>1780-1799</nmleth:vlans>
-    <nml:isAlias rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port10-out"/>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port5-out">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port24-in">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.dominica.ex:2013:port24">
+    <nml:hasPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port24-out"/>
+    <nml:hasPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port24-in"/>
+  </nml:BidirectionalPort>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port8-in">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
   </nml:PortGroup>
   <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.dominica.ex:2013:port7">
-    <nml:hasPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port7-out">
-        <nmleth:vlans>1780-1799</nmleth:vlans>
-      </nml:PortGroup>
-    </nml:hasPort>
-    <nml:hasPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port7-in">
-        <nmleth:vlans>1780-1799</nmleth:vlans>
-      </nml:PortGroup>
-    </nml:hasPort>
+    <nml:hasPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port7-out"/>
+    <nml:hasPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port7-in"/>
   </nml:BidirectionalPort>
-  <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.aruba.ex:2013:port15">
-    <nml:hasPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port15-in">
-        <nmleth:vlans>1780-1799</nmleth:vlans>
-      </nml:PortGroup>
-    </nml:hasPort>
-    <nml:hasPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port15-out">
-        <nmleth:vlans>1780-1799</nmleth:vlans>
-      </nml:PortGroup>
-    </nml:hasPort>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port3-in">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.dominica.ex:2013:port5">
+    <nml:hasPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port5-out"/>
+    <nml:hasPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port5-in"/>
   </nml:BidirectionalPort>
-  <nml:Location rdf:about="urn:ogf:network:ets.aruba.ex:2013:location"/>
-  <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.aruba.ex:2013:port10">
-    <nml:hasPort>
-      <nml:PortGroup rdf:about="urn:ogf:network:ets.aruba.ex:2013:port10-out">
-        <nmleth:vlans>1780-1799</nmleth:vlans>
-        <nml:isAlias rdf:resource="urn:ogf:network:ets.curacao.ex:2013:port10-in"/>
-      </nml:PortGroup>
-    </nml:hasPort>
-    <nml:hasPort rdf:resource="urn:ogf:network:ets.aruba.ex:2013:port10-in"/>
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.dominica.ex:2013:port8">
+    <nml:hasPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port8-out"/>
+    <nml:hasPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port8-in"/>
+  </nml:BidirectionalPort>
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.dominica.ex:2013:port19">
+    <nml:hasPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port19-in"/>
+    <nml:hasPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port19-out"/>
+  </nml:BidirectionalPort>
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.dominica.ex:2013:port14">
+    <nml:hasPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port14-in"/>
+    <nml:hasPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port14-out"/>
+  </nml:BidirectionalPort>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port12-out">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:PortGroup rdf:about="urn:ogf:network:ets.dominica.ex:2013:port9-in">
+    <nmleth:vlans>1780-1799</nmleth:vlans>
+  </nml:PortGroup>
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.dominica.ex:2013:port12">
+    <nml:hasPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port12-in"/>
+    <nml:hasPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port12-out"/>
+  </nml:BidirectionalPort>
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.dominica.ex:2013:port3">
+    <nml:hasPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port3-out"/>
+    <nml:hasPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port3-in"/>
+  </nml:BidirectionalPort>
+  <nml:BidirectionalPort rdf:about="urn:ogf:network:ets.dominica.ex:2013:port9">
+    <nml:hasPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port9-out"/>
+    <nml:hasPort rdf:resource="urn:ogf:network:ets.dominica.ex:2013:port9-in"/>
   </nml:BidirectionalPort>
 </rdf:RDF>
