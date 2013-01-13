@@ -5,6 +5,7 @@ The slides for the tutorial are available in the [slides](https://github.com/jer
 
 * [Introduction slides](https://github.com/jeroenh/NSI-Tutorial-Topologies/blob/master/slides/NSI%20Tutorial%20TIP%202013%20v3.pptx?raw=true)
 * [Concepts slides](https://github.com/jeroenh/NSI-Tutorial-Topologies/blob/master/slides/Connection%20Concepts%20NSI%20Workshop.pptx?raw=true)
+* [State Machine slides](https://github.com/jeroenh/NSI-Tutorial-Topologies/blob/master/slides/NSI_TIP2013Tutorial_SM.pptx?raw=true)
 * [Topology slides](https://github.com/jeroenh/NSI-Tutorial-Topologies/blob/master/slides/Topology.pptx?raw=true)
 
 Instructions for installing the OpenNSA client are on the [wiki](http://github.com/jeroenh/NSI-Tutorial-Topologies/wiki).
