@@ -1,4 +1,4 @@
-@prefix dominica: <urn:ogf:network:dominica:2013:> .
+@prefix dominica: <urn:ogf:network:ets.dominica.ex:2013:> .
 @prefix nml: <http://schemas.ogf.org/nml/2012/10/base#> .
 @prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
@@ -6,14 +6,8 @@
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-<urn:ogf:network:bonaire:2013:topology> a nml:Topology;
+<urn:ogf:network:ets.bonaire.ex:2013:topology> a nml:Topology;
     nsi:isReference "https://raw.github.com/jeroenh/NSI-Tutorial-Topologies/master/bonaire.n3" .
-
-dominica:bi-dominica a nml:BidirectionalPort;
-    nml:hasPort dominica:port10-in,
-        dominica:port10-out,
-        dominica:port7-in,
-        dominica:port7-out .
 
 dominica:location a nml:Location .
 
@@ -21,8 +15,17 @@ dominica:nsa a nsi:NSA;
     nsi:csProviderEndpoint "http://192.168.1.11:28380/nsi2_gl_proxy/services/ConnectionProvider";
     nsi:managing dominica:topology .
 
+dominica:port10 a nml:BidirectionalPort;
+    nml:hasPort dominica:port10-in,
+        dominica:port10-out .
+
+dominica:port7 a nml:BidirectionalPort;
+    nml:hasPort dominica:port7-in,
+        dominica:port7-out .
+
 dominica:topology a nml:Topology;
-    nml:hasBidirectionalPort dominica:bi-dominica;
+    nml:hasBidirectionalPort dominica:port10,
+        dominica:port7;
     nml:hasInboundPort dominica:port10-in,
         dominica:port7-in;
     nml:hasOutboundPort dominica:port10-out,
@@ -31,11 +34,11 @@ dominica:topology a nml:Topology;
     nsi:managedBy dominica:nsa .
 
 dominica:port10-in a nml:PortGroup;
-    nml:isAlias <urn:ogf:network:bonaire:2013:port10-out>;
+    nml:isAlias <urn:ogf:network:ets.bonaire.ex:2013:port10-out>;
     nmleth:vlans "1780-1799" .
 
 dominica:port10-out a nml:PortGroup;
-    nml:isAlias <urn:ogf:network:bonaire:2013:port10-in>;
+    nml:isAlias <urn:ogf:network:ets.bonaire.ex:2013:port10-in>;
     nmleth:vlans "1780-1799" .
 
 dominica:port7-in a nml:PortGroup;

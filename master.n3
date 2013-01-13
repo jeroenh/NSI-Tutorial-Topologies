@@ -1,7 +1,7 @@
-@prefix aruba: <urn:ogf:network:aruba:2013:> .
-@prefix bonaire: <urn:ogf:network:bonaire:2013:> .
-@prefix curacao: <urn:ogf:network:curacao:2013:> .
-@prefix dominica: <urn:ogf:network:dominica:2013:> .
+@prefix aruba: <urn:ogf:network:ets.aruba.ex:2013:> .
+@prefix bonaire: <urn:ogf:network:ets.bonaire.ex:2013:> .
+@prefix curacao: <urn:ogf:network:ets.curacao.ex:2013:> .
+@prefix dominica: <urn:ogf:network:ets.dominica.ex:2013:> .
 @prefix nml: <http://schemas.ogf.org/nml/2012/10/base#> .
 @prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
@@ -9,20 +9,23 @@
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-aruba:bi-aruba a nml:BidirectionalPort;
-    nml:hasPort aruba:port10-in,
-        aruba:port10-out,
-        aruba:port15-in,
-        aruba:port15-out .
-
 aruba:location a nml:Location .
 
 aruba:nsa a nsi:NSA;
     nsi:csProviderEndpoint "http://192.168.1.11:28380/nsi2_gl_proxy/services/ConnectionProvider";
     nsi:managing aruba:topology .
 
+aruba:port10 a nml:BidirectionalPort;
+    nml:hasPort aruba:port10-in,
+        aruba:port10-out .
+
+aruba:port15 a nml:BidirectionalPort;
+    nml:hasPort aruba:port15-in,
+        aruba:port15-out .
+
 aruba:topology a nml:Topology;
-    nml:hasBidirectionalPort aruba:bi-aruba;
+    nml:hasBidirectionalPort aruba:port10,
+        aruba:port15;
     nml:hasInboundPort aruba:port10-in,
         aruba:port15-in;
     nml:hasOutboundPort aruba:port10-out,
@@ -30,22 +33,28 @@ aruba:topology a nml:Topology;
     nml:locatedAt aruba:location;
     nsi:managedBy aruba:nsa .
 
-bonaire:bi-bonaire a nml:BidirectionalPort;
-    nml:hasPort bonaire:port10-in,
-        bonaire:port10-out,
-        bonaire:port22-in,
-        bonaire:port22-out,
-        bonaire:port7-in,
-        bonaire:port7-out .
-
 bonaire:location a nml:Location .
 
 bonaire:nsa a nsi:NSA;
     nsi:csProviderEndpoint "http://192.168.1.13:9080/NSI/services/CS2";
     nsi:managing bonaire:topology .
 
+bonaire:port10 a nml:BidirectionalPort;
+    nml:hasPort bonaire:port10-in,
+        bonaire:port10-out .
+
+bonaire:port22 a nml:BidirectionalPort;
+    nml:hasPort bonaire:port22-in,
+        bonaire:port22-out .
+
+bonaire:port7 a nml:BidirectionalPort;
+    nml:hasPort bonaire:port7-in,
+        bonaire:port7-out .
+
 bonaire:topology a nml:Topology;
-    nml:hasBidirectionalPort bonaire:bi-bonaire;
+    nml:hasBidirectionalPort bonaire:port10,
+        bonaire:port22,
+        bonaire:port7;
     nml:hasInboundPort bonaire:port10-in,
         bonaire:port22-in,
         bonaire:port7-in;
@@ -55,22 +64,28 @@ bonaire:topology a nml:Topology;
     nml:locatedAt bonaire:location;
     nsi:managedBy bonaire:nsa .
 
-curacao:bi-curacao a nml:BidirectionalPort;
-    nml:hasPort curacao:port10-in,
-        curacao:port10-out,
-        curacao:port20-in,
-        curacao:port20-out,
-        curacao:port4-in,
-        curacao:port4-out .
-
 curacao:location a nml:Location .
 
 curacao:nsa a nsi:NSA;
     nsi:csProviderEndpoint "http://192.168.1.14:8288/ConnectionService";
     nsi:managing curacao:topology .
 
+curacao:port10 a nml:BidirectionalPort;
+    nml:hasPort curacao:port10-in,
+        curacao:port10-out .
+
+curacao:port20 a nml:BidirectionalPort;
+    nml:hasPort curacao:port20-in,
+        curacao:port20-out .
+
+curacao:port4 a nml:BidirectionalPort;
+    nml:hasPort curacao:port4-in,
+        curacao:port4-out .
+
 curacao:topology a nml:Topology;
-    nml:hasBidirectionalPort curacao:bi-curacao;
+    nml:hasBidirectionalPort curacao:port10,
+        curacao:port20,
+        curacao:port4;
     nml:hasInboundPort curacao:port10-in,
         curacao:port20-in,
         curacao:port4-in;
@@ -80,20 +95,23 @@ curacao:topology a nml:Topology;
     nml:locatedAt curacao:location;
     nsi:managedBy curacao:nsa .
 
-dominica:bi-dominica a nml:BidirectionalPort;
-    nml:hasPort dominica:port10-in,
-        dominica:port10-out,
-        dominica:port7-in,
-        dominica:port7-out .
-
 dominica:location a nml:Location .
 
 dominica:nsa a nsi:NSA;
     nsi:csProviderEndpoint "http://192.168.1.11:28380/nsi2_gl_proxy/services/ConnectionProvider";
     nsi:managing dominica:topology .
 
+dominica:port10 a nml:BidirectionalPort;
+    nml:hasPort dominica:port10-in,
+        dominica:port10-out .
+
+dominica:port7 a nml:BidirectionalPort;
+    nml:hasPort dominica:port7-in,
+        dominica:port7-out .
+
 dominica:topology a nml:Topology;
-    nml:hasBidirectionalPort dominica:bi-dominica;
+    nml:hasBidirectionalPort dominica:port10,
+        dominica:port7;
     nml:hasInboundPort dominica:port10-in,
         dominica:port7-in;
     nml:hasOutboundPort dominica:port10-out,

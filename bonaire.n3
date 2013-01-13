@@ -1,4 +1,4 @@
-@prefix bonaire: <urn:ogf:network:bonaire:2013:> .
+@prefix bonaire: <urn:ogf:network:ets.bonaire.ex:2013:> .
 @prefix nml: <http://schemas.ogf.org/nml/2012/10/base#> .
 @prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
@@ -6,16 +6,8 @@
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-<urn:ogf:network:dominica:2013:topology> a nml:Topology;
+<urn:ogf:network:ets.dominica.ex:2013:topology> a nml:Topology;
     nsi:isReference "https://raw.github.com/jeroenh/NSI-Tutorial-Topologies/master/dominica.n3" .
-
-bonaire:bi-bonaire a nml:BidirectionalPort;
-    nml:hasPort bonaire:port10-in,
-        bonaire:port10-out,
-        bonaire:port22-in,
-        bonaire:port22-out,
-        bonaire:port7-in,
-        bonaire:port7-out .
 
 bonaire:location a nml:Location .
 
@@ -23,8 +15,22 @@ bonaire:nsa a nsi:NSA;
     nsi:csProviderEndpoint "http://192.168.1.13:9080/NSI/services/CS2";
     nsi:managing bonaire:topology .
 
+bonaire:port10 a nml:BidirectionalPort;
+    nml:hasPort bonaire:port10-in,
+        bonaire:port10-out .
+
+bonaire:port22 a nml:BidirectionalPort;
+    nml:hasPort bonaire:port22-in,
+        bonaire:port22-out .
+
+bonaire:port7 a nml:BidirectionalPort;
+    nml:hasPort bonaire:port7-in,
+        bonaire:port7-out .
+
 bonaire:topology a nml:Topology;
-    nml:hasBidirectionalPort bonaire:bi-bonaire;
+    nml:hasBidirectionalPort bonaire:port10,
+        bonaire:port22,
+        bonaire:port7;
     nml:hasInboundPort bonaire:port10-in,
         bonaire:port22-in,
         bonaire:port7-in;
@@ -35,11 +41,11 @@ bonaire:topology a nml:Topology;
     nsi:managedBy bonaire:nsa .
 
 bonaire:port10-in a nml:PortGroup;
-    nml:isAlias <urn:ogf:network:dominica:2013:port10-out>;
+    nml:isAlias <urn:ogf:network:ets.dominica.ex:2013:port10-out>;
     nmleth:vlans "1780-1799" .
 
 bonaire:port10-out a nml:PortGroup;
-    nml:isAlias <urn:ogf:network:dominica:2013:port10-in>;
+    nml:isAlias <urn:ogf:network:ets.dominica.ex:2013:port10-in>;
     nmleth:vlans "1780-1799" .
 
 bonaire:port22-in a nml:PortGroup;

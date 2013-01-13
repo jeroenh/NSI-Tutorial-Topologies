@@ -1,4 +1,4 @@
-@prefix curacao: <urn:ogf:network:curacao:2013:> .
+@prefix curacao: <urn:ogf:network:ets.curacao.ex:2013:> .
 @prefix nml: <http://schemas.ogf.org/nml/2012/10/base#> .
 @prefix nmleth: <http://schemas.ogf.org/nml/2012/10/ethernet#> .
 @prefix nsi: <http://schemas.ogf.org/nsi/2012/10/topology#> .
@@ -6,16 +6,8 @@
 
 nmleth:vlans owl:subPropertyOf nml:hasLabelGroup .
 
-<urn:ogf:network:aruba:2013:topology> a nml:Topology;
+<urn:ogf:network:ets.aruba.ex:2013:topology> a nml:Topology;
     nsi:isReference "https://raw.github.com/jeroenh/NSI-Tutorial-Topologies/master/aruba.n3" .
-
-curacao:bi-curacao a nml:BidirectionalPort;
-    nml:hasPort curacao:port10-in,
-        curacao:port10-out,
-        curacao:port20-in,
-        curacao:port20-out,
-        curacao:port4-in,
-        curacao:port4-out .
 
 curacao:location a nml:Location .
 
@@ -23,8 +15,22 @@ curacao:nsa a nsi:NSA;
     nsi:csProviderEndpoint "http://192.168.1.14:8288/ConnectionService";
     nsi:managing curacao:topology .
 
+curacao:port10 a nml:BidirectionalPort;
+    nml:hasPort curacao:port10-in,
+        curacao:port10-out .
+
+curacao:port20 a nml:BidirectionalPort;
+    nml:hasPort curacao:port20-in,
+        curacao:port20-out .
+
+curacao:port4 a nml:BidirectionalPort;
+    nml:hasPort curacao:port4-in,
+        curacao:port4-out .
+
 curacao:topology a nml:Topology;
-    nml:hasBidirectionalPort curacao:bi-curacao;
+    nml:hasBidirectionalPort curacao:port10,
+        curacao:port20,
+        curacao:port4;
     nml:hasInboundPort curacao:port10-in,
         curacao:port20-in,
         curacao:port4-in;
@@ -35,11 +41,11 @@ curacao:topology a nml:Topology;
     nsi:managedBy curacao:nsa .
 
 curacao:port10-in a nml:PortGroup;
-    nml:isAlias <urn:ogf:network:aruba:2013:port10-out>;
+    nml:isAlias <urn:ogf:network:ets.aruba.ex:2013:port10-out>;
     nmleth:vlans "1780-1799" .
 
 curacao:port10-out a nml:PortGroup;
-    nml:isAlias <urn:ogf:network:aruba:2013:port10-in>;
+    nml:isAlias <urn:ogf:network:ets.aruba.ex:2013:port10-in>;
     nmleth:vlans "1780-1799" .
 
 curacao:port20-in a nml:PortGroup;
