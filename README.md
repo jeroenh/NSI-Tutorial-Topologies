@@ -12,3 +12,4 @@ The slides for the tutorial are available in the [slides](https://github.com/jer
 Instructions for installing the OpenNSA client are on the [wiki](http://github.com/jeroenh/NSI-Tutorial-Topologies/wiki).
 
 * [Exercises](https://github.com/jeroenh/NSI-Tutorial-Topologies/blob/master/slides/Exercises.pptx?raw=true)
+* [Checking Logs](https://github.com/jeroenh/NSI-Tutorial-Topologies/blob/master/slides/logs.pptx?raw=true)
