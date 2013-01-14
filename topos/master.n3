@@ -171,11 +171,11 @@ dominica:port7-out a nml:PortGroup;
     nmleth:vlans "1780-1799" .
 
 aruba:port10-in a nml:PortGroup;
-    nml:isAlias curacao:port10-out;
+    nml:isAlias dominica:port10-out;
     nmleth:vlans "1780-1799" .
 
 aruba:port10-out a nml:PortGroup;
-    nml:isAlias curacao:port10-in;
+    nml:isAlias dominica:port10-in;
     nmleth:vlans "1780-1799" .
 
 aruba:port20-in a nml:PortGroup;
@@ -187,11 +187,11 @@ aruba:port20-out a nml:PortGroup;
     nmleth:vlans "1780-1799" .
 
 bonaire:port10-in a nml:PortGroup;
-    nml:isAlias dominica:port10-out;
+    nml:isAlias curacao:port10-out;
     nmleth:vlans "1780-1799" .
 
 bonaire:port10-out a nml:PortGroup;
-    nml:isAlias dominica:port10-in;
+    nml:isAlias curacao:port10-in;
     nmleth:vlans "1780-1799" .
 
 bonaire:port20-in a nml:PortGroup;
@@ -203,11 +203,11 @@ bonaire:port20-out a nml:PortGroup;
     nmleth:vlans "1780-1799" .
 
 curacao:port10-in a nml:PortGroup;
-    nml:isAlias aruba:port10-out;
+    nml:isAlias bonaire:port10-out;
     nmleth:vlans "1780-1799" .
 
 curacao:port10-out a nml:PortGroup;
-    nml:isAlias aruba:port10-in;
+    nml:isAlias bonaire:port10-in;
     nmleth:vlans "1780-1799" .
 
 curacao:port20-in a nml:PortGroup;
@@ -219,11 +219,11 @@ curacao:port20-out a nml:PortGroup;
     nmleth:vlans "1780-1799" .
 
 dominica:port10-in a nml:PortGroup;
-    nml:isAlias bonaire:port10-out;
+    nml:isAlias aruba:port10-out;
     nmleth:vlans "1780-1799" .
 
 dominica:port10-out a nml:PortGroup;
-    nml:isAlias bonaire:port10-in;
+    nml:isAlias aruba:port10-in;
     nmleth:vlans "1780-1799" .
 
 dominica:port20-in a nml:PortGroup;
